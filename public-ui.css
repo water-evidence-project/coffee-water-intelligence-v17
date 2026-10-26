@@ -23,3 +23,20 @@
 #pstudio-export{min-width:84px;white-space:nowrap}
 #pstudio-file-status:not(:empty){font-size:11px;line-height:1.5}
 @media(max-width:680px){.bottom-tools .csv-export-help{text-align:left}.bottom-tools{gap:4px}.pstudio-export-actions{flex-wrap:wrap}}
+
+/* Prioritize live map on narrow phones while keeping all tools reachable below. */
+@media(max-width:730px){
+ .app-body{grid-template-rows:auto auto auto!important}
+ .main-workspace{grid-column:2!important;grid-row:1!important;height:640px!important;min-height:0!important}
+ .explorer{grid-column:2!important;grid-row:2!important}
+ .inspector{grid-column:2!important;grid-row:3!important}
+ .rail{grid-column:1!important;grid-row:1 / span 3!important}
+ body.policy-full .main-workspace{height:100%!important}
+}
+@media(max-width:470px){
+ .main-workspace{height:590px!important}
+ body.policy-full .main-workspace{height:100%!important}
+ .map-locator{max-width:150px;font-size:10px}
+ .workspace-toolbar{padding:0 7px;gap:3px}
+ .workspace-ident strong{max-width:115px;overflow:hidden;text-overflow:ellipsis}
+}
