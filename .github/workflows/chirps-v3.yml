@@ -1,0 +1,98 @@
+name: CHIRPS v3 audited climate data
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Smoke-test official CHIRPS or build entire climatology
+        required: true
+        type: choice
+        options:
+          - smoke
+          - full
+        default: smoke
+permissions:
+  contents: write
+concurrency:
+  group: chirps-v3-climate-data
+  cancel-in-progress: false
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install raster dependencies
+        run: python -m pip install --quiet numpy rasterio
+      - name: Check computational logic with synthetic data
+        run: PYTHONPATH=pipeline python -m unittest discover -s pipeline -p 'test_chirps_v3.py' -v
+      - name: Verify publisher's 2025-01 CHIRPS v3 COG
+        run: python pipeline/chirps_v3.py smoke --output _work/source-smoke.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chirps-v3-official-smoke
+          path: _work/source-smoke.json
+          if-no-files-found: error
+  year:
+    if: ${{ inputs.operation == 'full' }}
+    needs: smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        year: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2025]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install raster dependencies
+        run: python -m pip install --quiet numpy rasterio
+      - name: Read publisher source windows and build annual result
+        run: python pipeline/chirps_v3.py year --year ${{ matrix.year }} --outdir _work
+      - uses: actions/upload-artifact@v4
+        with:
+          name: year-${{ matrix.year }}
+          path: _work/year_${{ matrix.year }}.npz
+          retention-days: 5
+          if-no-files-found: error
+  publish:
+    if: ${{ inputs.operation == 'full' }}
+    needs: [smoke, year]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: year-*
+          path: _work
+          merge-multiple: true
+      - name: Verify 372 source-window digests and compute 1991–2020 normal
+        run: |
+          python -m pip install --quiet numpy rasterio
+          python pipeline/chirps_v3.py publish --indir _work --output data
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-chirps-v3-data
+          path: |
+            data/chirps-v3-daklak.json
+            data/chirps-v3-cog-audit.json
+          if-no-files-found: error
+      - name: Publish only after every source check passed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/chirps-v3-daklak.json data/chirps-v3-cog-audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish audited CHIRPS v3 climate grid"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
