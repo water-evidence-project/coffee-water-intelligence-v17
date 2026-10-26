@@ -1,0 +1,3750 @@
+{
+  "status": "PASS",
+  "schema": "cwi.chirps.v3.audit.v1",
+  "createdAt": "2026-10-26T20:38:04.250716+00:00",
+  "dataset": "CHIRPS v3.0 monthly final",
+  "referencePeriod": "1991-2020",
+  "referenceSourceCount": 360,
+  "targetYear": 2025,
+  "targetSourceCount": 12,
+  "officialPublisherCOGWindowsChecked": 372,
+  "officialPublisherTiffFallbacks": 0,
+  "officialPublisherFilesChecked": 372,
+  "sourceWindowDigests": [
+    {
+      "year": 1991,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d555263d27b4a30dc163beb2792306ead260f67cc9264c2cf40096f16509b763",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "08dca28a35c94817e2f3ffe6a87a994dceaa094eb7f5f058b12134e3be2c2b4a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "987a42310c291609fd43b6ac9e835affbab79a3a971781d6d7108230f6547f78",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "65cbff1d9218c0aaa7c1460dee6c1afaba237c268d8d90be67bfb577e16155b5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0b5622550d3b172e49fbae40f3aff61381273345ff188425b59d7c6aada94599",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5e9480e3e2a91b6b149f150fb85a3f9e489e5cff931f0824021a35e36c026fec",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8e70472d0c7226429e986607dcdf9f17dc37190663ce83a681ab0eca0146513c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "def1ab19be8b64ae2de8981081a6da1eaac35373c6a4f76495e16d70d16c044c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7e100a7e2899af596327e5b1580a59112605141cad2c931082d2ee2410b9c6e4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "58f23d8dba32281fdeefe63d93a9654208c0aba6ee61a461393cbf12b6b5d5f6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "16f114aa40d5ffc9ceb2ac6e9d5e7c2a51a26031fb1e25266c849dbfa71f4542",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1991,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1991.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ce26ba85e4288a82a1bb6b3d3600fe2f69d991d4afed257d3fb28e07d853a098",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a99d6bdf7969fda6304e83f8ca08a341dc3732887c48dccc3ccf0e7cdfd719d6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5f6656d46ee25adff80f3a9562c23f8144f8de2fee8c3d3884b7a0f44d3a9aa2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9e6ef426fba6fab7ac69498beb35e7728b5722604c3e9b144aa18fce1c0fd28e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ad82a846b868857f6f9e09f474b8db77c758df543aa0012e85c673936e9184cd",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c66b78f4e7a5f9cb3d895512e4a32e50adaa542e6dbeb97f3b6605f26ea2105f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "83eceddef2f5ad87bb28c139eed2449ee3fa49047b79da367931e745256806d5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1c5d90658a6e00a35e61df564670a4dcd4a28f711b6461bb8a6e85cbe3218277",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f0969544f6bbc86c40dc111fcbfd623d39de874922cfbf08d3e4af26f7ad6453",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a6c9163f0fca84e7999fb4b83b2f5a15b2ebcc891d73469c2e669ba40c6899f8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "36c33d288922fd9db2004a7f30d2927253ecada43674f9a14b4c254b912b1c92",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "97a83c10f47ce007604173bb8f744a88f6d92953a883fee99f91bfc627c015fc",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1992,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1992.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0959900821d085dbc1782302e0c5f58f9b0e185314d824275ed88945b06036b0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e37773b786bce69b992e56af66d4523b255eec867593a5f8a55b75cdb3b0cb74",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ca800da08313822ec80a2424f0b744f140ae95075ceb9d2d60f316f16c099c4b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e35775fb055891f5f27d8ff43fb53b2981840a5cbf63e98b9bb63cf66ea6366f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7323da99009ba0412b14729d54057779ba31a8e7ef483e05315f222a5a3d2c4c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7f329cce40c44cdcad0e9b889903085839aaa52164c9c5f1349201467c567a4b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e6ba8321a9b3e6c935e6c8208645e2843125d1322c7be2c42bd617b203548fc5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "4363e705cf8e5d8926ec33d1c90dc1df219a3b11bd58290cc7822aca2d9dc0df",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8fae1396ea578bc3bb45f0311f0bc31cfa2129362a45f6cd4f20f87b68e3b2b4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "788991c7cd908fb187ab8009cc5eed3d3639f84ca3f777fe0017edd691784539",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "09d9a224d2d4e22a278feeab229ef29b8b8d09591cf36d81f64913fa6e1c66b7",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3404f164309374bcbb9a64fcb169c523af4dbff8635fb686c44cf523fe073168",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1993,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1993.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "99e8479c6dbeaa581bb47157db45314ec2f6fa9691f0be4476771868663165ae",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "dfb989febb216f608b591ea95d99f16e9e467fb1e296e41d35aaf704c219ea5b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5c6de7e40a4500eb6e4dce643a8224fc8fcc8754cd0e7ab2bb1c6cf571447ee9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "093b435ca84914d45eeb8e915803190276c85e88ae5025a4221cbf3c41600d82",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d2b009a4968b1c9792517175be20d3fb8f4568e3e186bd58a8d7cbfda93dae4e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3258db6f89f5b63825ed599fa5ac167303bf4b26ae01c01e66a81e3b918cb280",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "16e56a543bf34aea97032640cbe27cdf20a9397a1a4e8e17c9b9a61ae13d097a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0a608052d82af54f7bd1edbfb4f945273d0d514681e936ef7c1f94c8c1461be3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "14d5facaf5356bb2061b72005b712abc7975b65959365d1d47ee1e8a0ce678df",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "41ee8010b7f00cc77888626ff00234ba9f1496a5751ad21742101b51b23d5282",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "63220aed1ce3ea991c2cfd2afdde8a50df9b3f108a8a093a575579d83daed640",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "74bd4347b5ff510ef1cdf91966b5a94e4031dd32091aca60ac907497ed45e855",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1994,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1994.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "222cd6e7b355fe57130bf6c2b814665f6204ba37bd10fb8820dcaefd896318bf",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5b4f77cf462ab3df1e838b628d93b685088f9602411cbd7843acd07e128d8bcd",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ed515d03121a7c58b0f3eaff1d0acdc91cb6e623c904289f002c5414f438c989",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cc97c302d5b4b5927ac10b669396fa20efa4b617b8b92c30383cafe84daccd9d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1bafac649c9a72c369377bb1a6fc86eba3fdf4ff8d4bd221dd77337eeedd9d0a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8dc637e961ff42e9ac3c92f6005cc46ab3527fddf94f6b7edeb35ac560c00dd6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b0c038220eaa391e174b8fb193b08bd0f6b25e0b8835a709af7a2f99c320c0d3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "760391b04e9090e76f53908d98b242642f70155546779bacf44a908cedd16c1c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b4caec51a161e17428c558814aeb410447647b26016027bb3d983ab54218936f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "232737e0a57847e253fe6dfb1edfeff8b2ca7e6db00ffc451f991530b18c1d77",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d28320d56d85e22b2465278f51b1778b4500c0144b7f1eaaf19cf7bde4b410ad",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7867bd0d33ca243db8338e1c6619ab85eeba5428ec891e5c758273de84493c66",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1995,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1995.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2187510750be5bd0f467a5bb0c5b171ba32c65e78855edb7fa67fcba9a9bad76",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "13b9548f341edb01b7963f9e58f10fe67b25351177564bdafc25c6c1b6d4efb4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f2d31a4a0dfa0ecab93c194687e859b9c0b1aaad02a30e9ea88990f0efe418d9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c7b27f862eaa95892141a249aeebec21d78ec673b3804f033bab2c6a93f83c6c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "da6a58d5d29926dbd44cb1ec5d85ae8423f73fe5d72f88a3ffb3f870ba5a226a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2659dc2861642ef7724f8d95d667c3d86d38224872efb0b4c63201b0e87e8021",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d1c5ff2be68711ff5bdd0ddd33d033128a34881ba20fb6cdeca670d954284ba0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f3e0c32d40f8393b956f48b8afa8a717c29f4dd189925a806345adcb861e4fd3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "93c53694d2f57e196dcaa47778d6cd0dc41a295610825cd7108bad8843d093a0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8cd5cf08355e79a444c693bc2c56e679d3ca54bfd50c377266892da7ffad43c8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2c7ca5d99c042df51ee062854ba22793df373db11302ec3ba34fa3fdd4191844",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "922c8292b15809853171f327a10f397d898e31cf44ac1cbc0adfdcb55c46756a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1996,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1996.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "329945774038805f5423882f45482622c0c3f887d394112c4b626e034f13ede0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0c0cdca74486eb9d476b180f789006c3befe2015c7bb7f86dc26bb27d77cbb87",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0270f7fd1a41ffe558d98db044b7ca4c1991f98847b4e8f96343b32ac2163165",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cecc50a6ecdea0c50f53489b943f8e5713a1784d393d78cbb819d22e7eb466e0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e69187d7236e62a6ee3898c591c8ec53330527040c52ec49e4e7c59db745f2ab",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "59583e4c6e6a66311a8f0fb49b58547c11ab57fcb9fa610fbffc9f8d5a113267",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7701d20950a8d88b1a5644fa7ab8e5c246cf5ac1bd10d22da7cca2e8598d8759",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "575051f0f161b72c9612ae79563385b721ef00d4215c727aa1f831aae182ae0a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ca10482f913aca370f2b5a365ac520e70c5edcdbbb7be2ea40a2dbf54d3532a8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a82388e2fffb7e33e2b004f32708126e9d6123cce7e3f25b66f00b9ede1219e4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "6dd6405dd09c519b617d56e6fbd3233f120c900bac0fb1b2c520973ce6a74c52",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2d2e27825113dbd35f4c69d2a5568750bb3560fb9617bdad082dce3b293135a9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1997,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1997.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7bbeb6f9a9d1b289f56fd1c76c76b735a10165512733f250e285ea0438571b2b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "24a1c3bcfa4e056bc6f2e7d68d11a3e885f19de5289ccf198c3e139243d7cafd",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "93271dbba3a13165705d3b5a2e472ed185c954ab4fbb96c9d94e82959b5b66c6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ce3f9373ae446fc43aa30f68bf109ab2dbab0e23866df0e5bf5f7507428f791f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "75779112d42fd452c8e2c487c9bd81f771fd21f78e1f60acf446ba68dc5ff93b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5b7fb7cf2d35a4f66b95dbd8947b37e5642d2e2593a560c8598c6be0eea63b0f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "116789fc70cc79af4f14eb39f5b4421ef4f96c939f88249f9e8e06ab102b0ba9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "077c013229853f5fbc821d3ee4cfd8989875a958e9e5c7ae300bf863c6d60cea",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f4d700cec88ea9174e6e77d86bc1829bfa021c9a3606dbeb1142e3cbc529e5a8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b41a636def7f1d7adb582d198ca551ed341bf52dce04a873d11feb6d7a1672ce",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "bcb827e6add622e1fbfc3d488688bf8978bc40fa103f459f4af1662296620ea5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a621b1b1b248afddf1dc687b0124893cca2b3c3b7889d2d6f6189b4ddeb4c72d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1998,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1998.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c7fd6e37fdda9a8e86f7baa296f13866803ea067e6b959c8551f1542e675174a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a2d7866758ea3e5d86296af37590de5c41d76bc3caffbd4821cc2f6318ea1233",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f43be8c4ecac9f199d91677df2cd499363b5745dc6a796b29128e259073db88a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "628a0cf87f23277506a7414e70608b9e62a11ccc1ffe7b07f107360b6a3cdf43",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cccf12f15f0120f90d57e300816e04ef56998edf97765600965ada081421e3d0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8d601124feee8179d9d6053e2e00717f62356ebe331f683a1dfc3480a92c4a9d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c2129f0b4a260985fa36c477db3d19dc486dfc44e7cdc2bec31eaffb63774037",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "99eda04831b9a6c5c24af706d5a214e02e8d129df65bcb71cb76da35d0ee48c2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ad6f1556d298187edb8bf071033d9781c7314409352018bbea9c99b0fdea7e6a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "35be23dff7a30309d00250ffddca28d4243b95f4cce610920f7410d1e3215f74",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "76245e25eda1ae57cc3a0f7330e67a881c6f4e4738fc2bee15a8398a5d6b9585",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e230a180095fcaa881cced667125c45db6f88a92423f89449e888c67cf06de6c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 1999,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.1999.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "75bcb1961da433a5477253f352fa8a60d33fbfc36a0ef0b6ac44dd2b2a0ffcdb",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "db23329b6abab4e68ed0cf576ee10ef88e002130c823510864e2f3e2974a96f6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "671a09a9f3a7b7788cc9583c20f2396e7f7f5deb73f4d58f92791029c2898baa",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "70fdcc7196103f1740feddc50554033f137544c14e090a51f125fc65225a7758",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e8bf38d113312ecf0ddb53c34d4a8c5e01f633a591cd2556f863712fda58ad6e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a9ebffb1bed036bbb1590931261c7779b84ba550317f92421fd751cb30e96555",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7c3413830d88becb9e1c91f25c73174a07e0095455f8b7c55772566441472e0b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "681c23a5dd6d77e277c2c0c5e60e0f33b85b9002d2a673e8e5ab2e6b5b2ecc53",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "959cb148a77ebd2eaab8e2e8c4f9cfe3fc515b497ca855306055c3b4e5519cff",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "940a0d394a256505c02fd65b2658fa16625948283cd6c04c1a3fdb742dbe1145",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7fb9fad85fcc90d7b1ab90d6a5c71a4ef271da754be8fa8132d6f2969fdc3163",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "6bda725997d2272dc8965c79afca71a46c531745ada01827b61fcd2d5aff8788",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2000,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2000.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "533f0705ac6cd2ffa5be6c2f5b1685d6dd0b837490eeaeb425a831c88530d7df",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3a37ef90a45516b81a750804be8420a81ecd510a8b4741b0c233b56296ef2af5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "fe3a357aa19284eb7a4fdeb4f5868dae4543b243a050209ca5a809f4ba2d67f5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d6be691580938d59d9a8ae7c10619c98f6928f72b2aea530d4dc0e5c3cf5975c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5277ebd9c2f5377db4efb1dfa6bc3d66f0d5a544c961738e9bb37db9baf2a9ed",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1589dc47df0fdc0cd0aedeafee0deabb007ab3e97881cdbb6add9dc485f5e4d1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "40e9044b904a015a9142b03bbc09efe9002b471420508a2d5897c66cc1b21076",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "158fe0f3f422ebac5e39b5ca02c516055a876e4950ecf4448e3dd35cb1f1baf8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e8102941f83bac1d006c2bc418c348901d0044171101a23179e45248186497da",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "85439609add902da0ffe89174ab5ee27afac24412d008efba7f9ca417370baa7",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f84cfd4f86f9f119543c5cac8c4a4ca2e91b3b30c1b9c9766177bd83e7bf91f5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2868b6fefa1604a8c2dd6ac823fe28ef25d650baaf6a9d94ad38f9e05e283ba5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2001,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2001.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cedbae491a64425879714bcacfcfd198e8f48c0ec57916ccab53fb607d048796",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "095a9c3c4381d5d441d951a1fdd981f897afe287ed620e185bd2124de6535102",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "215b553ac2df68497e4e14d6d24bdc74406f639659c9c7f019f01ab5fb74d4b8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0d1281c8a9f9d6fcfd4cea927c6eeec57ae10d31dce2291a3e6b68454a25a3ee",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "790f693396795653b8a63c8bcb0d37fbaba356b4f8e09a7a56a07ea53a7a3b1d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "178fac41260567786f5cf7578866a455ea583e36ce2037dd2ae6e79ad7140432",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f9df1d8fdd74c16eec9119f647d9f1c6efaaf2bf380c05f48ed1241d82290937",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "41bdb1e7bbbe54561119d1f318c81fb3d3480fb26b52ab291b732b1dcd0e3346",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "67bc56871b7a84d445f5e962d30820f78460e703b0eda7d9cd6a5846e8c220c2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "dfbbb0292079ebc728d8325451d9e4d5b17cfaaec5daf6e9a894f0acb7c37c96",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0d352f56847aa7275babb8c8c922b8efa4f0b2aea8f3d26e550645081773e264",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1363d9f8924fc3a8b0370fac3e7929c1570f21302206dbfdaa57fb2da60e31c6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2002,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2002.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "fce4bffb1da4f4106900fbe4fd3072e6d5974eb2fd9cfa62f71516a06742a82f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3ddc135e50f8b57862c110b577b4d8555ae9574135e8cfa66450828c61f1e9c6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5f2c64a5a8dec34ae424cefa79a957b073d7e728a59b4c9309470bb919b24476",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ea13e099f89c546b4703907d08e45cfc3f100a32f46d705896c97f1dc796a9d9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ae7d8b5d662e9f07ed7657d891710585264c410338c8b66aa54b05220c2ba22c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3df0b93c9bf843d9919180c40080637486097264afd832d29a15d40b91641876",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "49b8d3c281599ef9bde90f587e2e76292756077d3ab92bc04527137ead0746d6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "bb08a38d124345439499665bf51c1c6de9ab72476d81da81266e7de433733ff8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c5f6c0fe27eb18c6a68c5f4f064c0c8972f36088ed544fa174998bb4a8b79618",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cc27e29fc7ed755c08a77ea55b52e374c61e1ea473f7956a55e2c7948b0f6544",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "bb1bae73dc76916b3bde2b17e626523a88435471f8fa55b497c00d64408a8bc0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ef5708aef72c7e60ce58c002f341db353d12be9be7030d64064325bb8dbfe6be",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2003,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2003.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2a31f9f40e03eb763b7e070478e039ee2041a75178254d5c72540665b57f9cf3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1f50e14c966f66f4fd3c004f2791b1e49c0a5363eec5f043d7b602907cea1bca",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "69125a6250f5a389d1cd87170bc019dcbe0c2a621e0ccafd533369d0e3ec09a2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ef848586950e41cbd0863159bb420ecaf283a9a6e002b8e75ae50e6d827a8c18",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "785390daa65b7c8c23b40df58329978722cc7348e13631c60c0060eaef072e3c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8c1a33063fc670d11aa23288a56c36c19f5e408807e8ae7b2ae6a008ed849365",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "83487122ea2bb7ecea546f1b91cfe4021d818ac4cbe6d9de3abb921d157e2b46",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e2d82fe064653d76d31047d2f0381404976c2c104cfb20d2c96dd34dc23faaa8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c15fe7bcdbb464a37d504349aaa9dbe4157eaa60d2461ad4ec592e2960b0d8b5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8757b5191c6c06354c90c64b88dcc30655c3f8c03fe192404c29393900a31a00",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "affd27c9cdc777ccd82a1f222b816ef04d3bbd9fc4e9ecf0aacdd1995f552cc5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2fde996408514699c2930e16660ee7fd8510d609bd81126c463d31138728de4f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2004,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2004.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3d424c2a9807423e7ed57456220a59d4cbee8e7b502d3ce41fb4a92231135adb",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "31e9608194d98f9684b4268e5c405141e45052beac63216c32325ee1c164b24d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0e03e1588831e56ec1d0579fb22d295a515185fd9e460f459959246fd3f0d21d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ca188d7c562206471d6407248cc99ffda05d4bce3ab16c4c8276781f4c655c05",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7d2742a0222d8fc1cc5fce6da001d324a78747d26fb4302fa87967f631ea8931",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "881fe11b36891d3f000e025aaf9d73eba6cf40fd23de9e8b9ed323bbb036de1f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1fbe03781838c41804213155b3619ec0637a5347785206120edf2492947d188a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d410bf07ac552234cb5131079b05bbccec9878f34dffeb37034a2ba6b6edaca0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "41a5b636324725279482454584bcc846cbbe24a171053615074563058b35bb6b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "70de6f57be2da4b0b9282cc60ba502a721ff8882e99150d2f2830b0612f67ffd",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "85fefed7b6eaad2bff950193863534448d3f83c1372a70d73b763c51d4d34696",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7508291fc57c9c5b409299c816c4c7ad2ed558163d1c9fe9a8f8d868a109fe4c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2005,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2005.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a32d8b9096fc1b2ca2d4292c6bb230d975ff9a3fdb75a8853450a6eb97823adb",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "430c6ed5522d92c1b72444a0d38d3d86cbcbe7a79a12790cb05dd49f55c6c600",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "af48e0f7d2df7617d5dffaa19e1a5fad062de3968a800d14fbd06228b26b5446",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "4a5c8a97c6a8fae141e3e51234106227dd4f8b18c2227d3d165dd83b3772ca7f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8ae88ae5152460beb1bd98282485d007a85ced4e15ecd3b670bcdb9e60790b87",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f5cb79ab315ded999c4249011464150ede2509ea3de2f38841b71253901f793d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b28c229f260a113ba9b9092736cca98fc24384e9c42927c0dd4ea03cf9cf49f7",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "bf78600c47fab6791442a44d8a6892ca975134bd4a851f55dda461facf26eca2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3a0664fc3195fe522cfaee776c207f74e37ddb9e85c0cbf8ae17caeb0e21ca14",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3a64a8991d41f684acb9d9cd7ba70bafd6fd7437385acb5b629e65c97907b3c2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9fbfcad57360d06e5b7090d5cb5ed25d486e1dc7b877e87266693e6ed45d8375",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1e4652a496f2c637e93ab1a005dcaef38146f83c625823526ff82f90a95dd739",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2006,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2006.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c9b4740de285bbc3f714d75572c30ced92f83e393707231df6eda483d8c529b9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "36938918fe30d9a47c000c944a23a869164c0f0e3df6ca024f6bb7450464457e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "522f1ca67b52f4eaeda7602976d2f3091fc95b2a2199df25a314f4856907021d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5939fe490479f43aad5ac5bf8686603c8744e9206e5e53a686161ca0f89e455d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c5e45c055b99e998a7507322d51dcefa61203c58fd2a9ef58e94cb9f4112a283",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f9fbc76fe4b3deb1f830aa35457c13e79bd846fec02ee03c88b31de4d8811bec",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8f524d5e2b841a46ea6f948160e408f51a2e544a8d719d65261e5ea85ccd6371",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "50ef8468a15a7b3069282dbe1634eb3bf798488c41f1e5e63138f0094ec2cd15",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "02c3ac4e0ffd4d119baaa00d726bc58385103d812ca7721681b148d884a41c9a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "08f0c2ef2296a42be5d52f73ed9a178063c0816eaf24cf04eba80bc6278dc2f2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e43e8cce87a97fac2a01b0fbfcf3d0690fd111b8b670ce6c347581ed9b10db27",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "57f66639b75bf64e55434698290274a5d8c0d107aa780c892d73d352a223d6d9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2007,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2007.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a3fdd29300bbb9a8aaf9c93cc6a5ce04113096d7f5c1211eb9149ecbd2575b76",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "76c2c1fdad3afdb359c9eadd1e1aad31af7c7f9138583e0330b1382a9dd30fd8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "75727edc837c567c13558f236639e7e8620de418a6177f011bae5743266f53b9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f7f054ad19e6eb09898125823a7ee7d78e20e687908c0e49e91b7d9f74cddede",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ca75802e9d4e0bd664c0d11a87a20b5ad5bbbfb1e22c1aadea7d6c73cb32d6c4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e2eddbb349534ae66306b8fca7caeac965ed9bd997d4d1074a8ea05d5d9cb28c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "4a020556e48361e45634863e65c908cd33233d1cfd5f33a7ebdeac1013676760",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2c4c67f904afddb03f47c3b3041c2163f793abe02c6cfd6a4a9455487c0a7b57",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3011e84021bd32bb400046faacb8703bfabbf529103463188515e51cfbb67d94",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1815336125a5cf40b0281584946a0c607b92098bdbcc88d6a60ea851188c9ba3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c9f01ccfde2d01ac66712ef33889845dff818148202c67e127e00fa8c60cd436",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8835f18c33fef09b4ebf3c489ea87039e63273030cc86e9ae9a755c935669ced",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2008,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2008.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2bf8ec23433a655f46f4b450cdf356eaa9d1371eee00ec2d226fc29e05a73493",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "032de0f40691d26d2791ef2496a89703c3cfc57cb5380d755e4081d1c637ecce",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "36f6407200bc184cde1e1b000e658fb14360f33fc054cf8bb774ff87671c5196",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1465a3d4415eedaba03df70270a7241e970ef434cf55f4e804a36c4aa149e9ac",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "48d5524cb9ffb447867a755834dae7c1eb841fe66bf7be0628ab44793ef50cbf",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "46e4a35f7e18e52a0d35e8ed2e07ca777883091e3b108567199c0b39d15a4997",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f6cb4aa13a06206af0f678b64e8306cfa17135c58b35101d58e41c369f79f88d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2efe75a4cba5bf5f4f513283143677ca4cc7fd54a0b88981a68553e93aa30f47",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c29b0c678401738b5124c10db3e967e633356a538d0c79bd1a112aa36f2891c1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "81502f3cced6689c68ad8adeac043f4b2c353b286bc4fb44c16fd59c0075712f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9cda94592fcce9767f750dcd0807057b3e813ff513c80fae73f7076452329140",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f7054de7dff4d38a4ebda20b3e5880bb18b364dc6992600b805135b45f09c7b4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2009,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2009.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "aafa46a9de1d40d975377c96740b7e24bd1df6ab814cdefb437ab098c5c3a39a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f9be32aec9140d68dfd6a2936e3a92106ee02b25227ca48cf08d3dd979690158",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d70301f1adb333e6e9b1333d8c9547daaf71d36292367bf03a9da6b575dbbdee",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "488a47c58eae156d80c30e194215da9483ba411d2f7718b200729b5300f997a0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7ff899b7111689c75979a86d0dc9662ed89e493e28f196104b015efee282e867",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0302845c1101b1a01dd3aa125d761027bd5531a05ae3c847db8704acb84a0628",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cd617977aa9d401903cbd0a7a6f7cc17e41082cf996809e9c34689087e5336d3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "980176cbc11183f5ab88e926ff493ab0a3a5b409d4f2dc04d8fad2d6402b3d05",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "dfd9addf6cfe405dc2d39096374464fee7e4cfcb6dffd20d3cacd79c2bec8e9c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "047c95a343ddcb46ae39f379076890cb55036370e03e6852f8d2db157dee50e3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "dc8db62c46393a4e175226f656674743b4d1bc6a1510447697386e0dbed37fe1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2612ae452e7b0fc724fe89aaa3f6be936c86bc476e2eb1355e0ef76b649ce029",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2010,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2010.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b097af07c1d1e1558af6e0a165fb851237b8993d6cccd22143768347a3293da7",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0c4032df07b0d31426bde5152d37f9fb29fc4ddfd8c092a9f55782e816616d76",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c5584ce3701bd372e8c56cdfd43f0202b4f99fe0550142c37b4f08509f41b703",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a5ecc43638865022c159383c5f9b40e322d15f548fe62fb08c5e5c84ff1a7195",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "00c734e17addd5fe6ed9f348e9cbe63173f846a167eda765619daf21fcb00e74",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2204b7c552239b3a58758e3bc8ef2f6f1ea77c784cf3d3380d0d6be6fb955439",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "29f59cd3b2e396aedc61646e4fbd0c81967cba9e43bf7f97af6c3fe35dcc6929",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "14627d2a5fe0bcb84f27c3883dbe6cbe4a47137813969ff5fd38cf5ce729caad",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c1ae9a73a110bb8c7a7d16188d2f49f692f0bb55e25b7cc3047c8fb364d3e1a2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "385640ddcd5ac4b46fe4f67dd0010c8634a5c11be1253d557b6c69cadb069aea",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0e80b86a008445a2f79483962b9c579851480ddcd27b019614e2753b61c77c83",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8bf1b271b04e28f287f8406f7512fe8927842b8330473bf49d6a2c671f77298c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2011,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2011.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "078f5df56e49097b6a8a516541680aa5b284abe8c685515a9c58173869648467",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a585fdc525dacc76a6411cedf8408ae9e7c406338b686a17cc82369eeb23fe7e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "679655a472f12ee15ae87815f8b50aa66158ba10a019febd670b53a4c9409098",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9472086695523639bca5fbecc468b6310f721d9257c1f8e0189f03336e268033",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9c7577e9465a9df328149d5ea0894ebacff96318fc1d534060281a28443a1f4b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a03dc93093f745dd4ef11d68701ef93d534817ad48da9c3c09688050fccfbd02",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "959c2153499be801ebda961b286f6aeff81569a4473fa1b1ad427b341ef9b54e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "15c21f107fc77904d16b2ecfbe3c5e87be96b7d464b2ffa7339f9dd1eeb8eabb",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "6eaccb0661bc0a255bb392aa8e401bc3dae99654a60088ba8e475135abe4b505",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0d0647452334ee6bd7563f5420efb8344e663aab80a68b4dd9600429fb7c63ea",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "12dcf79d8be5db7e1fb50ff23cd64a34226c8c9fc30f39d6ba0df83bfaf09652",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f1b0d55a4784a53df0f1dc7745a1b5ad993b5e9d709189d7ba685228b15b1c8c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2012,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2012.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a29ccba078c263a59887407e4e6cdf0a7e8a2a962b14513f100eb5eb46860721",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f29f367a40a4bb9b5060bc458a664f2f56f817fe2a5afcc4234c99698ab7774c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "4a2e065ab69c8bb5a6cdd7c4e86baaaeddc85b7a9b189fd005b27963e321fcbd",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f6d8ca531ea10adbcfa6ed8f361f62f568a2a9f257e26cb20eb9e5fb8e07725d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5332eb54b91acf985c3e85d4be88882db77bd6c87dcf0e63f7216dc11fc2d9e1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b484e05823909e07680bfe00db5f365c8f0f2ee6eb6e732906c6c2d044025343",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "112c8a3b481dfef041cb1ad9e687b3c796fb2ef46f28297be351ea01d2fdf661",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c96f48efd733f2605da428e43ba793c225dcb23e759010232a1fb84fe35f67ba",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "af513da0193593d20a1bdb75130e90f93e7b84945c4d427dd86d2603f751402f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f7a4e926e47e04d76e69a065062b5ba06c86ed901b5c42921430791fc1606189",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "27fe95506830ac96af3bc52b801ed274af3faea09454fa980e31628302a59b1e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0bbcf439e0bf5d19d8682cfae965845a239e7b45954f66085bc28d4086d8d921",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2013,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2013.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "6d0f470ebf7abcca2aea49847636221aab5168b72aab100cd395059d62073bbc",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "22aefd3f7b2ae10310bb88880f6e4985cb9ab10c487bdcbfcf8a685c51daba2b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "645ce7069d774fe602525f232fa65400dfa720c141e188404b8e55ab2e55b68b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "07b57b7fe42e90de7596b5160e60dbc4448c4d390dfbea55cac4fd8e9f39a131",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e7db940432a52c401e1a27c3d3293f5f939c59bad14da17b4b525fe84ff761ca",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9e678f5beb0f02dd9785b8a2c67ef6106a990f1141998d2a92c2c9293088f5d1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0d172373855a62576b82c9a2407da7b4989c1b0ecb8d1a7ce65562e31333566e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9573529021958b950454c81b129c5735980e8da1a07b6925a48e8bdd2beed59c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "12060ca50c25111cb18c8f6ef6becb62a38844197bcfa6ea3911264babc739e9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a8fce790f889b88054194d8dd1f62d4008719980acbc345e48679dc716c9bdf4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "decde5877f9a77e533408578f70daf1c14ae3d63079a4e1683c0ac6445a17861",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3fb17e94585ff9d468081bfb8c0284973a8b24ba27910ed14af00efe2bbf361d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2014,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2014.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7898cfcda0297e622d2dead658618774513fd2a36a6cb50fa98172de4bfbdded",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e96172940d00fe79baf4bdc5f31ab0a38e2153c4452765f271763636eac88ee3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "27cf4f6b217ef6c79ad72e085802ff312364d14c6beb6fe325c8658160dcbd1b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e6087769713d360bcde615d41fd800e5f8c886b823c4c930a35ba743250cbbbe",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "46816256386d6fe8f08d399449c4ac22b5d45ac4742ce9cd40fccf99fc33a8d2",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "26c5ae908bdcf9710d8378844c41ecdcf04e75f6dd3bb3cada4e186c4240c856",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "aa2572885054473468a086a291bef33dc8164a8db5ffbf24994663d0a065fc94",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e61188ccca6bf504372db646d56184b1b16fd8a1953c84250df787d4e652aa73",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "475d1c9ccd13f95775a9396f2e58fa1b002d98ee1f0d9cca5d25d970780b3394",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "44ce39acdc00b0b1ed15f7dd451182adfd5086cf618f177e413bc30465000600",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0bdce0864ad6db8240ab3bddfe2273ae2a97ccd4b3b26552f45ed3ca83262b82",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "21994061c20a3beb765a2993c2057307340eb1519ca31a904f2fa3f91f7fc50a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2015,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2015.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8239138d8392539ccd77acdf09cdd181d45d3e0f160819998be2042cc683c65f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "7be219bae630e476cb1bca97618da4bccbcce697c379b38aa371e820f752fcf5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c08579ead3d55eb6e55aac08b2a1f822da3f09dfc123f8595aafaeecfa5a012a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c9e7f25c9cd57d9f35bc73a8fc209ef32d5aa416eaac7d4477f7197736ff4849",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f0b3dbde192088b7bff905c9bb9786e2f5d4c6f2a2e9c11bc0bac760517cc969",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "3a9132c481312836b8fa3f4f8c5dda28a4abf9fa5e1fc1c8ee27821e3e598177",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "17193b90f03d43967aad8d7ca573c23fb202403a376ea01a91a469f1e079046d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "878868c45b7889beb9c530ecd28795fe32ded5533f0044ecafe9c82f2acbbf07",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cc276d417c5c27def25a4a252a40d1550f55d9825b24b59056fe8540dd857f07",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "548e9b1852723b7737213052acda3be373f924928ccb99c79bec740bfa810ba3",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e024457f452d8cdff9f32ac7afa32d1e09fe72e8f355831e4f0a8070de1e1a22",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a3646b2e230bf0dc58196577ac72b16969f090068554ecda1a50f2db183d7e15",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2016,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2016.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0714ee4f17cf88194f27ccd7b1d62ffd696ed22d062e294072b3367f9e64ddb6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2003234e6fe4b286cef5e4c627c73e2fdd88c5a84a3bef692b4e19fc2e3198d5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b3a1a7cfa404c5aebe1d09059277e2da73d7ff19642941a4600bb56cc7679e7d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "5d98d700080c4f13cafdb3cea4cc4ad84c98a57bb8e1ab49892f43bac3406a5f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "21611ded937877742dea63d2c2fa922d16a34a9e77789a948f5986c1b581ae8c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "f2aa4b1bb3f85946791af27caf8aa6444da2e3b5683eff5d606af79d05bad7ae",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "df6568701bf37ab507ae67e5a90ad1b3972bb4c22c538ee9d2a552a381719c0f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "383e4063f904e3c452c9efe7708f84bce5a4e51fca25643fdfac845940a31f4a",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "2def3ebebca88d48030811c147c59b05916ea01ec666bd7547dc7188b0877646",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "21bad6698e2fba494620a4de9397d71410fa7cd8acc7bea63af8631bfde90b8e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ca8173f630b4076195b65baf72ae2492dabbaca05454e6526d102c025cceb623",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9ae9a9c9312bb9a0ebd38585e5664250b0326a5480d874cd7078f54b1f8e3dc9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2017,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2017.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "6bfeb92c67e96edbf487e3e7e05da78dbd2c310f2da5cb75a0bf50a1a13148b0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "faf0cfbdfdacbf0f0b2ed045829a87c36dd29d43727cbb5af24d1869bc5183bb",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c091bacff13856c98a62e6410b97d0dc0b6fd26ce8d9342a8a9b595f636da605",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8c1b290898415b06c58793a00443a9576a4b869d376fca80e604ad0cc71d9a06",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a49116aac1fab177fe0e1550e63b52317d8ed158452c9b6b37c9cb333a93d32f",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0b5dad82bb20063985739140fcaab1060b008279df0d42b1934618d51baff890",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "1df5e676b70bca33a12420f2c474d6f923cd9907f405a6201c859d82d1439e42",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "4d3975ad07beb9ab73716e9920faad60687bf5fa0d6fbd0f60d87733b5f41c0c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "e3118a61bb4dd818aa53b8b7d9150be4fa9c920cc7bb5012ff4e8e3cbcf705c0",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "719191e07fc462ad0c45be905cbaa5b3c76cb9e74d89d73ed5f113c2ecdeea43",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ca5f58503bfb6293b5a9e636f2131f667c9bdb820412f5be29c6fc86445b2e84",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "43c49b6e7f1f9631ca77a76d592c4eef793e92cbb94c953f6387e25e36af438e",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2018.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "064d27085ba9583d01e570e3ec0e2f0e7c90d9846778fd38685491cd2453f2c1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "a51d354244c191e2fd57663872e93ae0c5e79cdc1a2047d7784185a065522795",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "84ffaaf98133cfb99cdc24b254a76af9760fb400ee5fdd460a6a78f8b4b41b2d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "6224b185857fcd0ffe8b6c00cc26228fa804fd58791fe69bee5ceb9a02a434e4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0ce2e6e386f4fc302eb5a4d6b601653e45d0d762e630dacef2a54095082c6209",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "38fd3cddbb77c68637391f9636aff37ca3754b210e6529af929575a2ae77099c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "dd2ff57233bab056e2dca43e150f0136baab86038b578df5cd3764695f3b5df9",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "bea8c00cfea814ff6405ff344f9a3e15b02276033bb3a60fb70822310998cd59",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "18214a008f48351a9d086a8071e1b613345c2200a4d8406fbb4c39606ed5c272",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "86132924408f28b99e6f81d244202045f0c3d6dddc72af617611bea19166de36",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8e360e3a4519ad34aeddc47c5cac0d5d47486c4b157e6ad0c6f0f83f2ef22ce8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8a6bebcdaa52b478342f1bb9a543f032ee3505366fb819301eda974954fa5461",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2019,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2019.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "85811b57f7ece10f067c18baeae79cf3b2b68adffb664304f64d1051e6524bda",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "c1a1aacd4ee9aaa8f73cb8694622a8b9297aa3bb0e430f8af289af82b65a1bb6",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "9675e57fc197fdfce8b32925ea06e993f8d44d05753206a5f06627ca536c3ed1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b718252f07a9ec7ca91ff5b5fec85b691a59a3c1d89d28b84b100cd97574f1aa",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "016d4df1679c08070a0fb289bfd2e0652bb1b03c737f188943ded1fecec66b74",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ad6993dfc8e648ea6cc4a7d44c75334b96b36dff854b06d64a098f7bef2f96bf",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "96e67c0470d66e32a545a1b7b63044dd90446d2d17897e2d7bd430b6dc1ddcd5",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ebde33976bf20024ff3575904c2c20e201f82f7986e02a2fe5b7f1fc9feb4fa8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "b0a458ac7a796019ee21024946a8b1b67b5dc879508586146396487dbec2e48c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "924dbaf0c762fc12f47557220619cd6a679721948d84c8b12d58566964f5cfaa",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "6510135490e948d3e6a3d02d72c5f32c8c7e4f9b9f99330c623440e81aab4bbd",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d0adda0f820ef0f3fb5e51ae539e122667c09a032b384f52fe4f911623fff589",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2020.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "422e677e2116f2f4fce91af10ebef7c1cb7b14137bd9eb3da26960b92b887f8b",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.01.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "d5b9625c3a916800a3b62acaba9b4ef00a513d14ab7daef0e03b64f5082a6936",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.02.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "ffbc0acaab8c652d6914ac43da5896ccecaa04dfd7d4d4e95d6121d5b808074d",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.03.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "0ef94c30fa816a778e14536d04fbcaf2ffa18d30d1e6435ce80edb97e56521ee",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.04.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "4e40974625d8eb116b1ad63b9f8c2757689b711356c0d7cca3d4414093125c0c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.05.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "cb4fce10de17b275ac19b6dae5e3f3e6cdff459ae29033cb1e44e6580580dad1",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.06.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "44dabf65e492a9962fa8073bd60e9b575293265818510c1597cec74f11a8dda4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.07.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "37507d032639d9970804b43a62675a0448d0342ec9a0c4ecef5706b3360cdb12",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.08.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "91567f499d38944bddf2c859a35b5d4db38b38b9589445b59fd3adde0d5b9fb8",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.09.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "652b564d5203e790e0b89d816e04b39cec9b1bcaeed69ad88c3276ecaeb006a4",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.10.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "df98320167f276c386d709eb86df6faf856fa908b6da3c033290828665537b59",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.11.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "82061e54c2b64eadca4263d4c48fc4f0c50b9a3bbec0ba0df466376dfa8a9c2c",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "sourceUrl": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/global/cogs/chirps-v3.0.2025.12.cog",
+      "readMethod": "COG range",
+      "windowDataSha256": "8bb27dc829c00bb7372af01312c4f578e4f6cb4c5344f21285bfd9b40361ed35",
+      "validCells": 1834,
+      "totalCells": 2050,
+      "invalidCells": 216
+    }
+  ],
+  "studyArea": "rectangular map viewport, not administrative polygon",
+  "grid": {
+    "west": 107.20000428,
+    "north": 13.89999931,
+    "dx": 0.05,
+    "dy": -0.05,
+    "width": 50,
+    "height": 41,
+    "crs": "EPSG:4326"
+  },
+  "fullyObservedBaselineCellMonthPct": 89.46341463414635,
+  "baselineCalculation": "mean and population standard deviation, corresponding month across 30 years, complete-cell only",
+  "geotiffNote": "windowDataSha256 is SHA-256 of cropped decoded float32 values, NOT publisher full COG file sha256",
+  "outputSha256": "82455fcd9bfb16ffa3b3c6beafc4353a1db7380c0ae2291b19edb5deec929434",
+  "mapFile": "chirps-v3-daklak.json"
+}
