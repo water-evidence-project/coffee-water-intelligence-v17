@@ -602,7 +602,7 @@ function mapInit(){
   $('#nav-overview').addEventListener('click',()=>{document.querySelector('.shell').classList.remove('max-map');document.body.classList.remove('collapsed-left');$$('.global-tabs .gtab').forEach(b=>b.classList.remove('active'));$('#nav-overview').classList.add('active')});
   $('#nav-economics').addEventListener('click',()=>{$('.shell').classList.remove('max-map');if(window.innerWidth<1020)$('#inspector').scrollIntoView({behavior:'smooth'});chooseEcon('overview');$$('.global-tabs .gtab').forEach(b=>b.classList.remove('active'));$('#nav-economics').classList.add('active')});
   $('#rail-econ').addEventListener('click',()=>{if(window.innerWidth<1020)$('#inspector').scrollIntoView({behavior:'smooth'});chooseEcon('overview')});
-  $('#rail-timeline').addEventListener('click',()=>$('#bottom-pane').scrollIntoView({behavior:'smooth'}));
+  // The dedicated side-rail navigation below handles this button.
   $('#rail-info').addEventListener('click',()=>$('#about-dialog').showModal());$('#help-btn').addEventListener('click',()=>$('#about-dialog').showModal());
   setBase('terrain');
 }
@@ -1704,7 +1704,7 @@ window.CWI_SEASONAL={monthsFor,aggregate,meanOfCells,state:()=>({year:S.year,met
 </header>
 <div class="contextbar"><span class="bread-segment">DỰ ÁN</span><span class="bread-chevron">/</span><span class="bread-active">Đắk Lắk · Nước tưới và kinh tế hộ cà phê</span><span class="version">CWI · BẢN TRÌNH BÀY NGHIÊN CỨU</span><div class="context-right"><span class="dot"></span><span>WGS 84 / EPSG:4326</span><span class="thin-split"></span><span>NGHIÊN CỨU 2026</span></div></div>
 <div class="app-body">
-<aside class="rail" aria-label="Công cụ"><span class="rail-wordmark">CWI</span><button class="rail-btn current" title="Layers" aria-label="Lớp bản đồ">▧</button><button class="rail-btn" id="rail-econ" title="Kinh tế" aria-label="Phân tích kinh tế">≋</button><button class="rail-btn" id="rail-policy" title="Mô phỏng quản lý" aria-label="Mở Policy Studio">▤</button><button class="rail-btn" id="rail-timeline" title="Chuỗi thời gian" aria-label="Chuỗi thời gian">⌁</button><span class="rail-flex"></span><button class="rail-btn" id="rail-info" title="Trạng thái dữ liệu" aria-label="Trạng thái dữ liệu">ⓘ</button></aside>
+<aside class="rail" aria-label="Công cụ"><span class="rail-wordmark">CWI</span><button type="button" class="rail-btn current" id="rail-map" title="Lớp bản đồ" aria-label="Lớp bản đồ" aria-controls="geoview" aria-pressed="true">▧</button><button class="rail-btn" id="rail-econ" title="Kinh tế" aria-label="Phân tích kinh tế">≋</button><button class="rail-btn" id="rail-policy" title="Mô phỏng quản lý" aria-label="Mở Policy Studio">▤</button><button type="button" class="rail-btn" id="rail-timeline" title="Chuỗi thời gian" aria-label="Chuỗi thời gian" aria-controls="tab-series" aria-pressed="false">⌁</button><span class="rail-flex"></span><button class="rail-btn" id="rail-info" title="Trạng thái dữ liệu" aria-label="Trạng thái dữ liệu">ⓘ</button></aside>
 <aside class="explorer" aria-label="Data explorer">
   <div class="section-top"><div><div class="small-overline">BẢN ĐỒ <span class="section-index">/ 01</span></div><h1>Bản đồ & dữ liệu</h1></div><button class="subtle-icon" id="collapse-left" title="Ẩn/hiện bảng điều khiển">☷</button></div>
   <div class="explorer-scroll">
@@ -2075,5 +2075,59 @@ html[data-theme='light'] .oc-question-tag{color:#245767;background:#dcecf0;borde
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 
+</script>
+
+<style id="cwi-rail-navigation-fix">
+body.timeline-focused:not(.policy-full):not(.policy-focused) .bottom-pane{height:clamp(265px,42vh,385px)!important;min-height:265px!important}
+@media(max-width:700px){body.timeline-focused:not(.policy-full):not(.policy-focused) .bottom-pane{height:320px!important;min-height:270px!important}}
+.rail-btn:focus-visible{outline:2px solid #90c9d2;outline-offset:2px}
+</style>
+<script id="cwi-rail-navigation-fix-js">
+(()=>{
+ 'use strict';
+ const $=s=>document.querySelector(s);
+ function selectRail(target){
+  document.querySelectorAll('.rail-btn').forEach(button=>{
+   const selected=button.id===target;
+   button.classList.toggle('current',selected);
+   button.setAttribute('aria-pressed',String(selected));
+  });
+  document.body.classList.toggle('timeline-focused',target==='rail-timeline');
+ }
+ function returnToOverview(){
+  document.body.classList.remove('policy-full','policy-focused');
+  $('.shell')?.classList.remove('max-map');
+  $('#nav-overview')?.click();
+ }
+ function openMap(){
+  returnToOverview();
+  document.body.classList.remove('collapsed-left');
+  selectRail('rail-map');
+  $('#geoview')?.scrollIntoView({behavior:'smooth',block:'nearest'});
+ }
+ function openTimeline(){
+  returnToOverview();
+  $('.bottom-tab[data-tab="series"]')?.click();
+  selectRail('rail-timeline');
+  $('#bottom-pane')?.scrollIntoView({behavior:'smooth',block:'nearest'});
+ }
+ function init(){
+  const map=$('#rail-map'),timeline=$('#rail-timeline');
+  if(!map||!timeline||!$('#bottom-pane'))return;
+  map.addEventListener('click',openMap);
+  timeline.addEventListener('click',openTimeline);
+  for(const [selector,target] of [
+   ['#nav-overview','rail-map'],['#nav-economics','rail-econ'],
+   ['#nav-policy','rail-policy'],['#rail-econ','rail-econ'],['#rail-policy','rail-policy']
+  ])$(selector)?.addEventListener('click',()=>selectRail(target));
+  document.querySelectorAll('.bottom-tab').forEach(tab=>tab.addEventListener('click',()=>{
+   const type=tab.dataset.tab;
+   selectRail(type==='series'?'rail-timeline':type==='policy'?'rail-policy':type==='evidence'?'rail-econ':'rail-map');
+  }));
+  selectRail('rail-map');
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+ else init();
+})();
 </script>
 </body></html>
