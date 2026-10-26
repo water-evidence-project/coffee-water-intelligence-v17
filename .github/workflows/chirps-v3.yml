@@ -41,7 +41,7 @@ jobs:
           path: _work/source-smoke.json
           if-no-files-found: error
   year:
-    if: ${{ inputs.operation == 'full' }}
+    if: ${{ github.event_name == 'push' || inputs.operation == 'full' }}
     needs: smoke
     runs-on: ubuntu-latest
     timeout-minutes: 110
@@ -66,7 +66,7 @@ jobs:
           retention-days: 5
           if-no-files-found: error
   publish:
-    if: ${{ inputs.operation == 'full' }}
+    if: ${{ github.event_name == 'push' || inputs.operation == 'full' }}
     needs: [smoke, year]
     runs-on: ubuntu-latest
     timeout-minutes: 20
