@@ -1,0 +1,22 @@
+/* CWI semifinal corrections — clarity, mobile, and accessible focus */
+.qa-incomplete-note{padding:20px 8px;text-align:center;color:var(--muted);font-size:12px}
+.qa-wms-links{display:flex;flex-wrap:wrap;gap:12px;padding:7px 0 4px;font-size:11px}
+.qa-wms-links a{color:#8dbfc9;text-decoration:underline;text-underline-offset:3px}
+.qa-wms-disclosure{font-size:10px;color:var(--muted);line-height:1.55;margin:6px 0 0}
+#qa-stored-message{display:block;margin-top:6px;color:var(--muted);font-size:10px;line-height:1.4}
+@media (max-width:600px){
+ html,body{max-width:100%;overflow-x:hidden}
+ .globalbar{max-width:100%;min-width:0}
+ .bottom-tabs{max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
+ .bottom-tab{flex:0 0 auto;white-space:nowrap}
+ .bottom-tools{flex-shrink:0}
+ .pstudio-io-actions{flex-wrap:wrap}
+ .pstudio-io-actions button{min-width:0;white-space:normal}
+}
+@media (max-width:360px){
+ .global-tabs{min-width:0;max-width:calc(100vw - 160px);overflow-x:auto;scrollbar-width:none}
+ .pstudio{min-width:0}
+ .pstudio-switcher{max-width:100%;overflow-x:auto}
+}
+
+@media(max-width:360px){.shell,.globalbar,.contextbar,.app-body{min-width:0!important;width:100%!important;max-width:100%!important}.explorer{max-width:calc(100vw - 40px)!important}.rail{flex-shrink:0}.bottom-tabs{max-width:100vw!important}}
