@@ -1,5 +1,10 @@
 name: CHIRPS v3 audited climate data
 on:
+  push:
+    paths:
+      - .github/workflows/chirps-v3.yml
+      - pipeline/chirps_v3.py
+      - pipeline/test_chirps_v3.py
   workflow_dispatch:
     inputs:
       operation:
