@@ -837,12 +837,38 @@ window.addEventListener('cwi-theme-changed',()=>{if(document.querySelector('#geo
     validate(d);lab.data=d;lab.loadedFrom=file.name;populate();
   }
   async function loadDefault(){
-    // Optional real CHIRPS export, never silently synthesize values.
+    // Fail closed: never expose a GitHub Pages climate layer without a matching
+    // PASS audit manifest and a browser-verified SHA-256 digest of the exact file.
     try{
-      const response=await fetch('./data/chirps-v3-daklak.json',{cache:'no-store'});
-      if(!response.ok)return;
-      const d=await response.json();if(lab.data)return;validate(d);lab.data=d;lab.loadedFrom='Bundled official publisher COG-window grid';populate();
-    }catch(e){console.info('No packaged CHIRPS grid or invalid file:',e.message)}
+      const [dataResponse,auditResponse]=await Promise.all([
+        fetch('./data/chirps-v3-daklak.json',{cache:'no-store'}),
+        fetch('./data/chirps-v3-cog-audit.json',{cache:'no-store'})
+      ]);
+      if(!dataResponse.ok||!auditResponse.ok)return;
+      const raw=await dataResponse.text();
+      const audit=await auditResponse.json();
+      if(audit.status!=='PASS'||audit.officialPublisherFilesChecked!==372||
+         audit.referenceSourceCount!==360||audit.targetSourceCount!==12||
+         audit.referencePeriod!=='1991-2020'||audit.dataset!=='CHIRPS v3.0 monthly final'||
+         typeof audit.outputSha256!=='string')throw Error('Publisher audit incomplete');
+      if(!crypto?.subtle)throw Error('Secure browser context required to verify CHIRPS');
+      const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(raw));
+      const hex=Array.from(new Uint8Array(digest),byte=>byte.toString(16).padStart(2,'0')).join('');
+      if(hex!==audit.outputSha256)throw Error('Climate dataset SHA-256 does not match audit');
+      const d=JSON.parse(raw);
+      if(d.dataset!==audit.dataset||d.baseline?.sourceCount!==360||
+         d.periods?.length!==12)throw Error('Inconsistent publisher dataset metadata');
+      if(lab.data)return;
+      validate(d);
+      lab.data=d;
+      lab.loadedFrom='Audited CHIRPS v3 publisher raster (1991–2020 reference)';
+      window.CWI_CHIRPS_SERVER_ATTESTED=true;
+      populate();
+    }catch(e){
+      console.warn('CHIRPS raster not published without matching audit:',e.message);
+      const status=document.getElementById('raster-state');
+      if(status)status.textContent='CHIRPS v3: nguồn dữ liệu chưa được kiểm toán thành công.';
+    }
   }
   function exportCSV(){
     if(!lab.period)return;
