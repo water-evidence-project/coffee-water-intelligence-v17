@@ -40,3 +40,11 @@
  .workspace-toolbar{padding:0 7px;gap:3px}
  .workspace-ident strong{max-width:115px;overflow:hidden;text-overflow:ellipsis}
 }
+
+/* Semifinal-facing copy: preserve data sources but remove implementation details. */
+#qa-wms-disclosure,.qa-wms-disclosure,.external-chirps-shortcut,
+.official-chirps-block,.baseline-workflow,.data-audit-panel,
+.seasonal-info > div:nth-child(4) small,.oc-evidence-title span,
+.oc-evidence .oc-note{display:none!important}
+#qa-wms-links{font-size:11px}
+#qa-wms-links a{opacity:.8}
