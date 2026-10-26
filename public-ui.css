@@ -1,0 +1,25 @@
+/* CWI v1.7 public-facing presentation refinements. Hide development-only acquisition and audit controls, not scientific source links. */
+.official-chirps-block,
+.baseline-workflow,
+.data-audit-panel,
+.raster-note,
+.raster-help,
+.oc-protocol,
+.oc-steps-title,
+#oc-guide,
+.oc-note,
+.oc-map-foot,
+.official-chirps-footer,
+.external-chirps-small,
+.oc-launch-meta,
+.oc-source-flag {display:none!important}
+.oc-insight > .oc-boundary {margin:14px 0}
+.oc-insight > p {line-height:1.5}
+.csv-export-help {display:block;max-width:260px;font-size:10px;line-height:1.4;color:var(--muted,#a9b9bf);margin-top:5px}
+.csv-export-help[data-ready="true"]{display:none}
+.bottom-tools {flex-wrap:wrap}
+.bottom-tools .csv-export-help{flex-basis:100%;margin:0 0 0 auto;text-align:right}
+.pstudio-export-actions{align-items:center}
+#pstudio-export{min-width:84px;white-space:nowrap}
+#pstudio-file-status:not(:empty){font-size:11px;line-height:1.5}
+@media(max-width:680px){.bottom-tools .csv-export-help{text-align:left}.bottom-tools{gap:4px}.pstudio-export-actions{flex-wrap:wrap}}
