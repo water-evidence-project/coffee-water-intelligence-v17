@@ -61,10 +61,10 @@ function updateWMSLinks(){
   const cap=base+'?service=WMS&version=1.3.0&request=GetCapabilities';
   const legend=base+'?service=WMS&version=1.1.1&request=GetLegendGraphic&format=image%2Fpng&layer='+encodeURIComponent(layer);
   area.innerHTML='<a target="_blank" rel="noopener noreferrer" href="'+cap+'">'+t('Thông tin lớp WMS','WMS metadata')+'</a><a target="_blank" rel="noopener noreferrer" href="'+legend+'">'+t('Chú giải từ USGS (nếu có)','USGS legend (if available)')+'</a>';
+  // Metadata and source links remain accessible; suppress developer QA prose on the public dashboard.
   const warning=$('#qa-wms-disclosure');
-  if(warning)warning.textContent=$('#wms-variable')?.value==='anomaly'
-    ? t('Chưa xác nhận kỳ chuẩn, đơn vị và phiên bản CHIRPS của lớp dị thường USGS; không diễn giải màu thành mức hạn.', 'USGS anomaly baseline, units, and CHIRPS version have not been verified; do not interpret colors as drought severity.')
-    : t('Lớp ảnh WMS chưa được xác nhận là CHIRPS v3. Muốn đọc giá trị mm, cần chú giải và dữ liệu gốc tại nguồn.', 'This WMS image is not independently verified as CHIRPS v3. Numerical rainfall values require source metadata and data.');
+  if(warning){warning.textContent='';warning.hidden=true;}
+
 }
 function updatePeriods(){
   const year=$('#wms-year'),month=$('#wms-month');if(!year||!month)return;
