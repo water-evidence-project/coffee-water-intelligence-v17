@@ -93,3 +93,76 @@ body.di-open .globalbar{position:relative;z-index:9001}
 [data-theme=light] #di-root button,[data-theme=light] #di-root select{color:#164250;background:#e5eff2;border-color:#afc6cf}
 [data-theme=light] #di-root .di-verdict{background:#f4efe4}
 @media print{#di-root{position:static!important;display:block!important;overflow:visible!important;background:#fff!important;color:#222!important}body.di-open .globalbar,body.di-open .shell{display:none!important}#di-root .di-headtools,#di-root .di-mapzone,#di-root .di-frontier,#di-root .di-control{display:none!important}#di-root .di-card{break-inside:avoid!important}}
+
+/* 2026-10-28: geographic reference restoration (aligned to CHIRPS 50x41 grid) */
+#di-root .di-mapzone{position:relative;overflow:hidden}
+#di-root .di-reference{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
+#di-root .di-ref-grid line{stroke:#b3d3d1;stroke-width:0.65;opacity:.28}
+#di-root .di-ref-coast path{stroke:#9ab8b5;stroke-width:1.4;fill:none;opacity:.72}
+#di-root .di-ref-hydro path{stroke:#9bd0d9;stroke-width:1.75;fill:none;opacity:.88}
+#di-root .di-ref-border{stroke:#f4c77c;stroke-width:2.8;stroke-linejoin:round;fill:none;opacity:.97}
+#di-root .di-ref-labels circle{fill:#e6ddd0;stroke:#112533;stroke-width:2}
+#di-root .di-ref-labels text{font:600 12px Inter,system-ui,sans-serif;fill:#f5f7f6;stroke:#0b1720;stroke-width:3.5;paint-order:stroke}
+#di-root .di-mapcorner{z-index:2}
+/* Full light palette: clear contrast for every module, not only card backgrounds. */
+html[data-theme="light"] #di-root{
+ background:#edf3f6!important;color:#233e4b!important;--di-light-text:#193b49;--di-light-muted:#58717d;
+}
+html[data-theme="light"] #di-root .di-head{border-color:#c4d4db}
+html[data-theme="light"] #di-root .di-head h1,
+html[data-theme="light"] #di-root h2,
+html[data-theme="light"] #di-root h3,
+html[data-theme="light"] #di-root .di-intro,
+html[data-theme="light"] #di-root .di-fin-grid strong,
+html[data-theme="light"] #di-root .di-four b,
+html[data-theme="light"] #di-root .di-numbers b,
+html[data-theme="light"] #di-root #di-point,
+html[data-theme="light"] #di-root .di-verdict b,
+html[data-theme="light"] #di-root .di-report{color:#153949!important}
+html[data-theme="light"] #di-root .di-head p,
+html[data-theme="light"] #di-root .di-footnote,
+html[data-theme="light"] #di-root label,
+html[data-theme="light"] #di-root .di-small,
+html[data-theme="light"] #di-root .di-fin-grid span,
+html[data-theme="light"] #di-root .di-four span,
+html[data-theme="light"] #di-root .di-geoside span,
+html[data-theme="light"] #di-root .di-evidence span,
+html[data-theme="light"] #di-root .di-evidence p{color:#546e7c!important}
+html[data-theme="light"] #di-root .di-kicker{color:#136e73!important}
+html[data-theme="light"] #di-root .di-card{background:#fff!important;border-color:#c5d5dd!important}
+html[data-theme="light"] #di-root .di-titleline{border-color:#d2dee3!important}
+html[data-theme="light"] #di-root .di-geoside,
+html[data-theme="light"] #di-root .di-fin-grid>div,
+html[data-theme="light"] #di-root .di-four>div,
+html[data-theme="light"] #di-root .di-next,
+html[data-theme="light"] #di-root .di-numbers>div,
+html[data-theme="light"] #di-root .di-evidence,
+html[data-theme="light"] #di-root .di-report{background:#f1f6f8!important;border-color:#ccdce3!important}
+html[data-theme="light"] #di-root #di-trigger{color:#815417!important}
+html[data-theme="light"] #di-root .di-tag{color:#176b5b!important;border-color:#8fc5b6!important}
+html[data-theme="light"] #di-root .di-control{border-color:#d2dfe5}
+html[data-theme="light"] #di-root .di-control output{color:#0d7771!important}
+html[data-theme="light"] #di-root .di-frontier{background:#eff5f7!important;border-color:#c4d7dd!important}
+html[data-theme="light"] #di-root .di-paneltitle,
+html[data-theme="light"] #di-root .di-plotkey,
+html[data-theme="light"] #di-root .di-method summary{color:#315b69!important}
+html[data-theme="light"] #di-root .di-verdict{background:#fff5e5!important;border-color:#bc8b43!important}
+html[data-theme="light"] #di-root .di-verdict[data-result="fully"]{background:#e7f5ee!important;border-color:#348c65!important}
+html[data-theme="light"] #di-root .di-verdict[data-result="never"]{background:#fceeea!important;border-color:#bc584e!important}
+html[data-theme="light"] #di-root .di-verdict strong{color:#79501b!important}
+html[data-theme="light"] #di-root .di-verdict[data-result="fully"] strong{color:#216747!important}
+html[data-theme="light"] #di-root .di-verdict[data-result="never"] strong{color:#983c38!important}
+html[data-theme="light"] #di-root .di-next p{color:#344f5d!important}
+html[data-theme="light"] #di-root .di-evidence b{color:#1a5e61!important}
+html[data-theme="light"] #di-root .di-line{border-color:#d4e0e4!important}
+html[data-theme="light"] #di-root button.di-site{background:#eaf3f5!important;color:#214858!important;border-color:#b9d1d9!important}
+html[data-theme="light"] #di-root .di-site strong{color:#805922!important}
+html[data-theme="light"] #di-root .di-geogrid .di-geoside{color:#163947!important}
+html[data-theme="light"] #di-root .di-method{color:#526c79!important}
+html[data-theme="light"] #di-root #di-status[data-state="ok"]{color:#176149!important;background:#e5f5ed!important}
+html[data-theme="light"] #di-root #di-status[data-state="loading"]{color:#7e551f!important;background:#fff4dc!important}
+html[data-theme="light"] #di-root #di-status[data-state="error"]{color:#a03c34!important;background:#fcebe7!important}
+html[data-theme="light"] #di-root .di-mapzone{background:#122733!important}
+html[data-theme="light"] #di-root .di-ref-border{stroke:#f9cf83}
+html[data-theme="light"] #di-root .di-ref-grid line{opacity:.33}
+html[data-theme="light"] #di-root .di-ref-labels text{fill:#fff;stroke:#0e2632}
