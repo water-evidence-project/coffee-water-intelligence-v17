@@ -1,0 +1,65 @@
+name: CWI map rendering QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - '.github/workflows/basemap-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-map-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install headless Chromium driver
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Serve CWI
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cwi-web.log 2>&1 &
+          echo $! > /tmp/cwi-web.pid
+      - name: Check dark basemap and save screenshots
+        run: |
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+            const errors=[],tiles=[];
+            page.on('console',m=>{if(m.type()==='error')errors.push(m.text().slice(0,200));});
+            page.on('requestfailed',r=>{if(/tile.openstreetmap|arcgisonline|cartocdn/.test(r.url()))tiles.push({url:r.url(),failure:r.failure()?.errorText})});
+            page.on('response',r=>{if(/tile.openstreetmap|arcgisonline|cartocdn/.test(r.url()))tiles.push({status:r.status(),url:r.url()})});
+            await page.goto('http://127.0.0.1:8765/',{waitUntil:'domcontentloaded',timeout:60000});
+            await page.locator('[data-basemap="dark"]').first().click();
+            await page.waitForTimeout(16000);
+            const info=await page.evaluate(()=>({
+              mode:document.querySelector('#geo-map')?.getAttribute('data-basemap-mode'),
+              tileState:document.querySelector('#geo-map')?.dataset.tilesState,
+              number:document.querySelectorAll('#dark-tiles image').length,
+              visible:getComputedStyle(document.querySelector('#dark-tiles')).opacity,
+              indicator:document.querySelector('#tile-indicator')?.textContent,
+              provider:document.querySelector('#dark-tiles')?.dataset.source,
+              credit:document.querySelector('.map-credit')?.textContent,
+            }));
+            await page.screenshot({path:'cwi-dark.png',fullPage:false});
+            console.log('MAP_QA_RESULT',JSON.stringify(info));
+            console.log('TILE_HTTP_STATUS',JSON.stringify(tiles.slice(0,30)));
+            console.log('BROWSER_ERRORS',JSON.stringify(errors.slice(0,20)));
+            await browser.close();
+            if(!(info.tileState==='ready'&&info.number>0&&info.visible==='1')){console.error('CWI_MAP_QA_FAILED: streets not rendered');process.exit(1)}
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cwi-map-browser-qa
+          path: cwi-dark.png
+          if-no-files-found: ignore
