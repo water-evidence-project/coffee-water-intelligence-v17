@@ -126,7 +126,7 @@ function render(){
  if(!S.busy&&!S.data&&S.error) setIntegrity(t("error")+" · "+S.error,"error");
  const candidates=dataReady&&S.span<=S.month?rank().slice(0,6):[];
  const list=$("di-list");
- if(list)list.innerHTML=candidates.length?candidates.map((x,i)=>'<button type="button" class="di-site" data-point="'+x.i+'"><span>'+String(i+1).padStart(2,"0")+"  "+x.c.lat.toFixed(3)+"°N  "+x.c.lon.toFixed(3)+'°E</span><strong>'+fmt(x.total)+" mm</strong></button>").join(""):"<p>"+t("unavailable")+"</p>";
+ if(list)list.innerHTML=candidates.length?candidates.map((x,i)=>'<button type="button" class="di-site" data-point="'+x.i+'"><span>'+String(i+1).padStart(2,"0")+"  "+x.c.lat.toFixed(3)+"°N  "+x.c.lon.toFixed(3)+'°E</span><strong>'+fmt(x.total)+" mm</strong></button>").join(""):"<p>"+(dataReady?(S.span>S.month?t("no_data"):t("no_signal")):t("unavailable"))+"</p>";
  const near=$("di-rain-flag");if(near){near.dataset.signal=screen?.flag?"yes":"no"}
  const r=$("di-summary");if(r)r.textContent=fin.error?t("invalid"):t(fin.label)+". "+(screen?.flag?t("yes_signal"):t("no_signal"))+". "+t("note");
  $("di-month").value=String(S.month);$("di-span").value=String(S.span);$("di-low").value=String(S.lo);$("di-high").value=String(S.hi);$("di-shock").value=String(S.shock);
