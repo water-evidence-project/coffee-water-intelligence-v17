@@ -149,4 +149,5 @@ const CWI2=(function(){
  }
  return {install,refresh,stats,screen,getState:()=>({...state})};
 })();
+window.CWI2=CWI2;
 CWI2.install();
