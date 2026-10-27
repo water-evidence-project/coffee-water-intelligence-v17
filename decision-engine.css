@@ -170,3 +170,23 @@ html[data-theme="light"] #di-root .di-ref-labels text{fill:#fff;stroke:#0e2632}
 /* Chart is deliberately a dark plotting surface in both themes because its raster labels and traces are drawn in a dark-chart palette. */
 html[data-theme="light"] #di-root .di-frontier{background:#0b1923!important;border-color:#8aa8b7!important}
 html[data-theme="light"] #di-root .di-frontier .di-paneltitle,html[data-theme="light"] #di-root .di-frontier .di-plotkey{color:#c7dbe1!important}
+
+/* Screenshot QA: fully legible light UI */
+html[data-theme="light"] #di-root .di-geoside{background:#f2f7f9!important;color:#173b49!important}
+html[data-theme="light"] #di-root .di-tag{background:#d9eee7!important;color:#155847!important;border-color:#80b4a3!important}
+html[data-theme="light"] #di-root #di-trigger{color:#87531b!important;font-weight:750!important;text-shadow:none!important}
+html[data-theme="light"] #di-root .di-geoside span,html[data-theme="light"] #di-root .di-geoside small,html[data-theme="light"] #di-root .di-small{color:#456675!important;opacity:1!important}
+html[data-theme="light"] #di-root .di-numbers>div{background:#e5f0f4!important;border-left:3px solid #3c8993!important}
+html[data-theme="light"] #di-root .di-numbers b,html[data-theme="light"] #di-root #di-point{color:#153c4c!important}
+html[data-theme="light"] #di-root .di-geoside .di-line{border-color:#c2d3db!important}
+html[data-theme="light"] #di-root #di-list p{color:#365869!important}
+html[data-theme="light"] #di-root .di-verdict{background:#fff0e5!important;color:#654620!important}
+html[data-theme="light"] #di-root .di-verdict strong{color:#963c35!important}
+html[data-theme="light"] #di-root .di-verdict .di-small,html[data-theme="light"] #di-root .di-verdict b{color:#604f43!important;opacity:1!important}
+html[data-theme="light"] #di-root .di-next{background:#eff6f8!important}
+html[data-theme="light"] #di-root .di-next p,html[data-theme="light"] #di-root .di-next label{color:#345868!important}
+html[data-theme="light"] #di-root .di-evidence{background:#ecf4f7!important}
+html[data-theme="light"] #di-root .di-evidence span,html[data-theme="light"] #di-root .di-evidence p{color:#4b6775!important}
+html[data-theme="light"] #di-root .di-evidence b{color:#145e64!important}
+html[data-theme="light"] #di-root .di-report{background:#e9f5f4!important;color:#173c4a!important;border-left-color:#288b80!important}
+html[data-theme="light"] #di-root .di-method summary{color:#385d6c!important;opacity:1!important}
