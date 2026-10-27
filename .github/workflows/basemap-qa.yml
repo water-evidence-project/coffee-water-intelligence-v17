@@ -72,6 +72,12 @@ jobs:
                 await page.goto('http://127.0.0.1:8765/',{waitUntil:'domcontentloaded'});
                 await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
                 await page.locator('#nav-integrated').click();
+                const navState=await page.evaluate(()=>({
+                  active:[...document.querySelectorAll('.global-tabs .gtab.active')].map(x=>x.id),
+                  policyFull:document.body.classList.contains('policy-full')
+                }));
+                if(navState.active.length!==1||navState.active[0]!=='nav-integrated'||navState.policyFull)failures.push('NAV STATE '+JSON.stringify(navState));
+
                 await page.waitForFunction(()=>window.CWI_DECISION?.getState().verified||document.querySelector('#di-status')?.dataset.state==='error',{timeout:30000});
                 const state=await page.evaluate(()=>window.CWI_DECISION.getState());
                 const panel=page.locator('.di-numbers>div').first();
