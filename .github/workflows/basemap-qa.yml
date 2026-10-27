@@ -56,10 +56,49 @@ jobs:
             if(!(info.tileState==='ready'&&info.number>0&&info.visible==='1')){console.error('CWI_MAP_QA_FAILED: streets not rendered');process.exit(1)}
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
+      - name: Full application and Decision Intelligence smoke test
+        run: |
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const failures=[];
+            for(const theme of ['light','dark']){
+              for(const size of [{width:1440,height:900},{width:390,height:844}]){
+                const page=await browser.newPage({viewport:size,deviceScaleFactor:1,acceptDownloads:true});
+                const pageErrors=[];page.on('pageerror',e=>pageErrors.push(String(e)));
+                await page.goto('http://127.0.0.1:8765/',{waitUntil:'domcontentloaded'});
+                await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
+                await page.locator('#nav-integrated').click();
+                await page.waitForFunction(()=>window.CWI_DECISION?.getState().verified||document.querySelector('#di-status')?.dataset.state==='error',{timeout:30000});
+                const state=await page.evaluate(()=>window.CWI_DECISION.getState());
+                const panel=page.locator('.di-numbers>div').first();
+                const spaces=await panel.evaluate(el=>{
+                  const a=el.querySelector('small').getBoundingClientRect(),b=el.querySelector('b').getBoundingClientRect();
+                  return {gap:b.top-a.bottom,overlap:a.bottom>b.top,text:el.innerText};
+                });
+                const metrics=await page.locator('#di-observed').innerText();
+                await page.locator('#di-low').fill('20');
+                await page.locator('#di-high').fill('70');
+                const caseInfo=await page.evaluate(()=>window.CWI_DECISION.getCase());
+                if(!state.verified)failures.push('CLIMATE '+theme+' '+size.width);
+                if(spaces.overlap||spaces.gap<0)failures.push('METRIC OVERLAP '+JSON.stringify(spaces));
+                if(caseInfo.scenario?.npvWorst>caseInfo.scenario?.npvBest)failures.push('NPV BOUNDS');
+                if(pageErrors.length)failures.push('PAGE ERROR '+pageErrors.slice(0,5).join('|'));
+                const path='qa-'+theme+'-'+size.width+'.png';
+                await page.screenshot({path,fullPage:false});
+                console.log('UI_TEST',JSON.stringify({theme,width:size.width,state,spaces,metrics,npvWorst:caseInfo.scenario?.npvWorst,npvBest:caseInfo.scenario?.npvBest,errors:pageErrors.slice(0,4)}));
+                await page.close();
+              }
+            }
+            await browser.close();
+            if(failures.length){console.error('FULL_QA_FAILURE',JSON.stringify(failures));process.exit(1);}
+          })().catch(e=>{console.error(e);process.exit(1)})
+          NODE
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cwi-map-browser-qa
-          path: cwi-dark.png
+          path: |\n            cwi-dark.png\n            qa-*.png
           if-no-files-found: ignore
