@@ -621,88 +621,102 @@ function setBase(mode){S.mode=mode;$('#geo-map').dataset.basemapMode=mode;$$('[d
 }
 let lastTileMode=null,tileRequestId=0,tileTimer=null;
 function invalidateTiles(){
-  ++tileRequestId;
-  if(tileTimer!==null){clearTimeout(tileTimer);tileTimer=null;}
-  const pane=$('#dark-tiles');pane.replaceChildren();pane.style.opacity='0';
-  $('#geo-map').dataset.tilesState='idle';lastTileMode=null;
+ ++tileRequestId;
+ if(tileTimer!==null){clearTimeout(tileTimer);tileTimer=null}
+ const pane=$('#dark-tiles');pane.replaceChildren();pane.style.opacity='0';
+ $('#geo-map').dataset.tilesState='idle';lastTileMode=null;
 }
 function loadTiles(mode){
-  const theme=document.documentElement.dataset.theme||'dark',variant=mode+':'+theme;
-  if(lastTileMode===variant&&$('#geo-map').dataset.tilesState!=='fallback')return;
-  const requestId=++tileRequestId;
-  if(tileTimer!==null){clearTimeout(tileTimer);tileTimer=null;}
-  lastTileMode=variant;
-  const pane=$('#dark-tiles'),map=$('#geo-map'),relief=$('#relief-image');
-  pane.replaceChildren();pane.dataset.mode=mode;pane.style.opacity='0';
-  map.dataset.tilesState='loading';
+ const variant=mode+':'+(document.documentElement.dataset.theme||'dark');
+ if(lastTileMode===variant&&$('#geo-map').dataset.tilesState!=='fallback')return;
+ const epoch=++tileRequestId;
+ if(tileTimer!==null){clearTimeout(tileTimer);tileTimer=null}
+ lastTileMode=variant;
+ const pane=$('#dark-tiles'),map=$('#geo-map'),relief=$('#relief-image'),badge=$('#tile-indicator');
+ pane.replaceChildren();pane.dataset.mode=mode;pane.style.opacity='0';
+ map.dataset.tilesState='loading';relief.style.opacity=mode==='dark'?'.8':'.95';
+ const cur=()=>epoch===tileRequestId&&S.mode===mode&&lastTileMode===variant;
+ // The foreground climate polygons and research markers remain independent of the basemap.
+ const providers=mode==='dark'
+  ?[{id:'esri-street',name:'Esri World Street Map',z:9,make:(z,x,y)=>'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/'+z+'/'+y+'/'+x},
+    {id:'osm',name:'OpenStreetMap',z:9,make:(z,x,y)=>'https://tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png'},
+    {id:'esri-street-low',name:'Esri World Street Map',z:8,make:(z,x,y)=>'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/'+z+'/'+y+'/'+x}]
+  :[{id:'esri-imagery',name:'Esri World Imagery',z:9,make:(z,x,y)=>'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/'+z+'/'+y+'/'+x}];
+ function overlayFallback(){
+  if(!cur())return;
+  pane.replaceChildren();pane.style.opacity='0';map.dataset.tilesState='fallback';
   relief.style.opacity=mode==='dark'?'.8':'.95';
+  badge.textContent=mode==='dark'
+   ?mapText('Nền tối dự phòng · Không có đường sá','Dark fallback · Roads not available')
+   :mapText('Ảnh vệ tinh không khả dụng','Satellite imagery unavailable');
   $('.map-credit').textContent=mapText('Dữ liệu địa lý tham chiếu','Geographic reference data');
-  $('#tile-indicator').textContent=mode==='dark'
-    ?mapText('Đang nạp đường sá OpenStreetMap…','Loading OpenStreetMap roads…')
-    :mapText('Đang nạp ảnh vệ tinh…','Loading satellite imagery…');
-  const z=9,n=2**z,lonA=107.2,lonB=107.2+870/345,latA=13.9,latB=13.9-700/345;
-  const toX=x=>(x+180)/360*n,toY=y=>(1-Math.asinh(Math.tan(y*Math.PI/180))/Math.PI)/2*n;
+  lastTileMode=null;
+ }
+ function tileGeometry(prov){
+  const z=prov.z,n=2**z,l=107.2,r=107.2+870/345,top=13.9,bottom=13.9-700/345;
+  const toX=lon=>(lon+180)/360*n,toY=lat=>(1-Math.asinh(Math.tan(lat*Math.PI/180))/Math.PI)/2*n;
   const invY=y=>Math.atan(Math.sinh(Math.PI*(1-2*y/n)))*180/Math.PI;
-  const xMin=Math.floor(toX(lonA)),xMax=Math.floor(toX(lonB));
-  const yMin=Math.floor(toY(latA)),yMax=Math.floor(toY(latB));
-  const tiles=[];
-  for(let xx=xMin;xx<=xMax;xx++)for(let yy=yMin;yy<=yMax;yy++){
-    const w=xx/n*360-180,e=(xx+1)/n*360-180,nn=invY(yy),ss=invY(yy+1);
-    tiles.push({x:X(w),y:Y(nn),width:X(e)-X(w),height:Y(ss)-Y(nn),
-      url:mode==='satellite'
-        ?'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/'+z+'/'+yy+'/'+xx
-        :'https://tile.openstreetmap.org/'+z+'/'+xx+'/'+yy+'.png'});
+  const items=[];
+  for(let tx=Math.floor(toX(l));tx<=Math.floor(toX(r));tx++)
+   for(let ty=Math.floor(toY(top));ty<=Math.floor(toY(bottom));ty++){
+    const w=tx/n*360-180,e=(tx+1)/n*360-180,nn=invY(ty),ss=invY(ty+1);
+    items.push({url:prov.make(z,tx,ty),x:X(w),y:Y(nn),w:X(e)-X(w),h:Y(ss)-Y(nn)});
+   }
+  return items;
+ }
+ async function loadProvider(prov){
+  const tiles=tileGeometry(prov),timeout=mode==='dark'?9000:11000;
+  badge.textContent=mode==='dark'
+   ?mapText('Đang tải mạng đường sá · '+prov.name,'Loading street map · '+prov.name)
+   :mapText('Đang tải ảnh vệ tinh','Loading satellite imagery');
+  const controller={cancel:false};
+  let timer;
+  function preload(t){
+   return new Promise((resolve,reject)=>{
+    const img=new Image();img.crossOrigin='anonymous';img.decoding='async';
+    img.onload=()=>{if(controller.cancel||!cur())return reject(Error('cancelled'));resolve({...t,img});};
+    img.onerror=()=>reject(Error('image unavailable'));
+    img.src=t.url;
+   });
   }
-  let complete=false,done=0,abandoned=false;
-  const active=()=>!abandoned&&tileRequestId===requestId&&S.mode===mode&&lastTileMode===variant;
-  function fail(){
-    if(!active()||complete)return;
-    abandoned=true;
-    if(tileTimer!==null){clearTimeout(tileTimer);tileTimer=null;}
-    pane.replaceChildren();pane.style.opacity='0';
-    map.dataset.tilesState='fallback';
-    relief.style.opacity=mode==='dark'?'.8':'.95';
-    // Explain actual rendered layer rather than claiming missing road tiles are visible.
-    $('#tile-indicator').textContent=mode==='dark'
-      ?mapText('Nền tối dự phòng · Chưa có đường sá OSM','Fallback dark layer · OSM roads unavailable')
-      :mapText('Nền dự phòng · Chưa có ảnh vệ tinh','Fallback layer · Satellite tiles unavailable');
-    $('.map-credit').textContent=mapText('Dữ liệu địa lý tham chiếu','Geographic reference data');
-    lastTileMode=null; // Switching away and back retries; never silently promise roads.
+  try{
+   const results=await Promise.race([
+    Promise.all(tiles.map(preload)),
+    new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('tile timeout')),timeout);})
+   ]);
+   if(!cur()||controller.cancel)throw Error('stale request');
+   // Composite a fully loaded viewport into one self-contained image. This
+   // prevents a second wave of SVG remote-image requests and patchwork tiles.
+   const scale=2,c=document.createElement('canvas');c.width=1740;c.height=1400;
+   const ctx=c.getContext('2d');if(!ctx)throw Error('Canvas unavailable');
+   ctx.setTransform(scale,0,0,scale,0,0);
+   for(const t of results)ctx.drawImage(t.img,t.x,t.y,t.w+.4,t.h+.4);
+   const png=c.toDataURL('image/png');
+   if(!png.startsWith('data:image/png'))throw Error('Canvas cannot be exported');
+   return {png,provider:prov,count:results.length};
+  }finally{controller.cancel=true;if(timer!==undefined)clearTimeout(timer);}
+ }
+ (async()=>{
+  for(const provider of providers){
+   if(!cur())return;
+   try{
+    const result=await loadProvider(provider);
+    if(!cur())return;
+    const image=makeSvg('image',{x:0,y:0,width:870,height:700,preserveAspectRatio:'none'});
+    image.setAttribute('href',result.png);
+    pane.replaceChildren(image);pane.dataset.source=result.provider.id;
+    map.dataset.tilesState='ready';pane.style.opacity='1';relief.style.opacity='0';
+    badge.textContent=mode==='dark'
+      ?mapText('Đường sá · '+result.provider.name,'Roads · '+result.provider.name)
+      :mapText('Ảnh vệ tinh đã tải','Satellite imagery loaded');
+    $('.map-credit').textContent=mode==='dark'
+      ?(result.provider.id==='osm'?'© OpenStreetMap contributors':'Map tiles: Esri World Street Map · geographic reference')
+      :'Imagery: Esri World Imagery · geographic reference';
+    return;
+   }catch(e){if(!cur())return}
   }
-  function showFullLayer(){
-    if(!active()||complete||done!==tiles.length)return;
-    complete=true;
-    if(tileTimer!==null){clearTimeout(tileTimer);tileTimer=null;}
-    // All images are now fully decoded in HTML image elements.
-    // A single DOM commit avoids fragmented or partially loaded SVG tile mosaics.
-    const frag=document.createDocumentFragment();
-    for(const item of tiles){
-      const el=makeSvg('image',{x:item.x,y:item.y,width:item.width+.4,height:item.height+.4,preserveAspectRatio:'none'});
-      el.setAttribute('href',item.url);
-      frag.appendChild(el);
-    }
-    pane.replaceChildren(frag);
-    map.dataset.tilesState='ready';
-    pane.style.opacity='1';relief.style.opacity='0';
-    $('#tile-indicator').textContent=mode==='dark'
-      ?mapText('Đã nạp đường sá OpenStreetMap · '+tiles.length+' ô','OpenStreetMap roads loaded · '+tiles.length+' tiles')
-      :mapText('Đã nạp ảnh vệ tinh · '+tiles.length+' ô','Satellite imagery loaded · '+tiles.length+' tiles');
-    $('.map-credit').textContent=mode==='satellite'
-      ?'Imagery: Esri World Imagery · geographic reference'
-      :'Basemap: © OpenStreetMap contributors · geographic reference';
-  }
-  for(const item of tiles){
-    const img=new Image();
-    img.decoding='async';
-    img.onload=()=>{
-      if(!active()||complete)return;
-      const decoded=typeof img.decode==='function'?img.decode().catch(()=>null):Promise.resolve();
-      decoded.then(()=>{if(!active()||complete)return;done++;showFullLayer();});
-    };
-    img.onerror=fail;
-    img.src=item.url; // Only tiles covering the user-visible extent are requested.
-  }
-  tileTimer=setTimeout(fail,15000);
+  overlayFallback();
+ })().catch(()=>overlayFallback());
 }
 function clearClimate(){S.months=null;S.raw=null;$('#annual-value').textContent='—';$('#annual-unit').textContent='mm / year';$('#summary-label').textContent='Awaiting provider response';$('#query-status').className='query-status';$('#query-status').innerHTML='<span class="status-circle muted"></span><span>Not requested. Click the map to choose a point.</span>';$('#chart').innerHTML='<div class="empty-visual"><span class="empty-icon">⌁</span><div><strong>No time series loaded</strong><small>Select a location and fetch NASA POWER data to view the observed monthly series.</small></div></div>';$('#series-state').textContent='POINT SERIES / NOT REQUESTED';$('#series-dot').className='status-circle muted';$('#download-csv').disabled=false}
 function initClimate(){$('#year').addEventListener('change',()=>{S.year=Number($('#year').value);clearClimate()});$('#parameter').addEventListener('change',()=>{S.parameter=$('#parameter').value;if(S.months)renderClimate();else $('#annual-unit').textContent=S.parameter==='rain'?'mm / year':'°C / year'});$('#fetch-climate').addEventListener('click',fetchClimate);$('#download-csv').addEventListener('click',async()=>{const btn=$('#download-csv');if(btn.dataset.busy==='1')return;btn.dataset.busy='1';btn.disabled=true;const old=btn.textContent;btn.textContent='ĐANG TẢI DỮ LIỆU…';try{if(!S.months||!S.raw)await fetchClimate();if(S.months&&S.raw)saveCSV()}finally{btn.dataset.busy='0';btn.disabled=false;btn.textContent=old;}})}
