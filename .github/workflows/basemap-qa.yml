@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'decision-engine.js'
+      - 'decision-engine.css'
       - '.github/workflows/basemap-qa.yml'
   workflow_dispatch:
 permissions:
@@ -100,5 +102,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cwi-map-browser-qa
-          path: |\n            cwi-dark.png\n            qa-*.png
+          path: |
+            cwi-dark.png
+            qa-*.png
           if-no-files-found: ignore
