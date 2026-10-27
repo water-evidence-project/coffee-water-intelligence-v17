@@ -171,3 +171,13 @@ body.cwi2-open #cwi2-integrated-view{display:block}
 #cwi2-integrated-view .cwi2-foot{color:var(--ci-muted);font-size:11px}
 @media(max-width:1050px){#cwi2-integrated-view .cwi2-layout{grid-template-columns:1fr}}
 @media(max-width:650px){#cwi2-integrated-view .cwi2-container{padding:12px}#cwi2-integrated-view .cwi2-top{align-items:flex-start;flex-direction:column}#cwi2-integrated-view .cwi2-panelhead{align-items:flex-start;flex-direction:column}#cwi2-integrated-view .cwi2-cards,#cwi2-integrated-view .cwi2-econ,#cwi2-integrated-view .cwi2-report{grid-template-columns:1fr}#cwi2-integrated-view .cwi2-econ article,#cwi2-integrated-view .cwi2-card{border-right:0;border-bottom:1px solid var(--ci-border)}}
+
+/* Integrated workspace is appended to document.body, not inside .shell.
+   Keep original v1.7 header visible and present the analysis as a true app pane. */
+body.cwi2-open{overflow:hidden!important}
+body.cwi2-open #cwi2-integrated-view{position:fixed!important;left:0!important;right:0!important;top:48px!important;bottom:0!important;z-index:9000!important;display:block!important;height:auto!important;min-height:0!important;overflow-y:auto!important}
+body.cwi2-open .globalbar{z-index:9001!important;position:relative!important}
+body.cwi2-open .shell{height:100dvh!important;overflow:hidden!important}
+@media(min-width:1600px){body.cwi2-open #cwi2-integrated-view{top:52px!important}}
+@media(max-width:730px){body.cwi2-open #cwi2-integrated-view{top:45px!important}}
+@media print{body.cwi2-open #cwi2-integrated-view{position:static!important;overflow:visible!important}}
