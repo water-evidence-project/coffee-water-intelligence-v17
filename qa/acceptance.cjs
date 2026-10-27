@@ -182,6 +182,21 @@ async function main(){
    if(terrain!=='terrain'||dark!=='dark'||satellite!=='satellite')throw Error(JSON.stringify({before,terrain,dark,satellite}));
    return {before,terrain,dark,satellite};
   });
+  await check('research','Export economic research note',async()=>{
+    await page.locator('.bottom-tab[data-tab="evidence"]').evaluate(el=>el.click());
+    const file=await getFile(page,'#econ-export');
+    if(!file.name.endsWith('.txt')||!file.content.includes('Không suy ra quan hệ nhân quả'))throw Error(JSON.stringify({name:file.name,preview:file.content.slice(0,110)}));
+    return nonempty(file);
+  });
+  await check('season','Export seasonal precipitation CSV when dataset is eligible',async()=>{
+    await page.locator('.bottom-tab[data-tab="season"]').evaluate(el=>el.click());
+    await page.waitForTimeout(500);
+    const status=await page.locator('#season-export').evaluate(el=>({disabled:el.disabled}));
+    if(status.disabled)throw Error('Season data not eligible; cannot certify seasonal CSV export');
+    const file=await getFile(page,'#season-export');
+    if(!file.name.endsWith('.csv')||!file.content.includes('longitude'))throw Error(JSON.stringify(nonempty(file)));
+    return nonempty(file);
+  });
   await note('external','NASA POWER live data and CSV export need independent provider validation',async()=> 'A live NASA API request requires network and provider availability; not counted as passing');
   await note('external','Dark/imagery tiles depend on provider and must not be used as deterministic reliability pass',async()=> 'Map-mode changes were tested; provider content may be unavailable');
   await check('external','Open and close official CHIRPS source viewer panel',async()=>{
