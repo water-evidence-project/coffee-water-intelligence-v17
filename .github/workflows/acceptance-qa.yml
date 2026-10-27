@@ -1,0 +1,40 @@
+name: CWI comprehensive acceptance
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'qa/acceptance.cjs'
+      - '.github/workflows/acceptance-qa.yml'
+      - 'decision-engine.js'
+      - 'decision-engine.css'
+      - 'index.html'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Start local CWI
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/cwi-qa-server.log 2>&1 &
+      - name: Run comprehensive acceptance tests
+        run: node qa/acceptance.cjs
+      - name: Publish test reports and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cwi-comprehensive-acceptance
+          path: |
+            cwi-acceptance-results.json
+            qa-accept-*.png
+          if-no-files-found: ignore
