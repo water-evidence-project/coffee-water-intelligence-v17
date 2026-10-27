@@ -41,7 +41,7 @@ async function main(){
   const {page,ctx,errors}=await setup(browser);
   await check('startup','Required systems initialized',async()=>{
    await page.waitForFunction(()=>!!(window.CWI_POLICY&&window.CWI_RASTER&&window.CWI_DECISION&&window.CWI_I18N),{timeout:25000});
-   return {policy:!!window.CWI_POLICY,raster:!!window.CWI_RASTER,decision:!!window.CWI_DECISION}
+   return await page.evaluate(()=>({policy:!!window.CWI_POLICY,raster:!!window.CWI_RASTER,decision:!!window.CWI_DECISION}))
   });
   await check('core','Policy arithmetic edge cases',async()=>{
    const a=await page.evaluate(()=>{
@@ -194,6 +194,7 @@ async function main(){
   });
   await check('external','Export manually entered CHIRPS source notes',async()=>{
    await click(page,'#nav-official-chirps',{domFallback:true});
+   await page.locator('details.oc-notes-disclosure').evaluate(e=>e.open=true);
    await page.locator('#oc-record-notes').fill('QA test note — not a verified measurement');
    await click(page,'#oc-add-record',{domFallback:true});
    const data=await getFile(page,'#oc-export-record');
