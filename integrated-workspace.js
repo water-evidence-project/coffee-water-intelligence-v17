@@ -66,8 +66,8 @@ function drawMap(){
 }
 function chart(){
  const cv=$("cwi2-chart"),ctx=cv?.getContext("2d");if(!ctx||!state.data)return;
- const width=Math.max(300,cv.getBoundingClientRect().width*devicePixelRatio||580),height=200*devicePixelRatio;
- cv.width=width;cv.height=height;const dpr=devicePixelRatio||1;ctx.scale(dpr,dpr);
+ const dpr=window.devicePixelRatio||1;const width=Math.max(300,cv.getBoundingClientRect().width*dpr||580),height=200*dpr;
+ cv.width=width;cv.height=height;ctx.scale(dpr,dpr);
  const w=width/dpr,h=height/dpr,pts=Array.from({length:12},(_,i)=>cell(state.selected,i+1));
  const vals=pts.flatMap(x=>x?[x.rain,x.normal]:[]);const mx=Math.max(25,...vals)*1.12;
  ctx.clearRect(0,0,w,h);ctx.font="11px system-ui";ctx.fillStyle="#91b4bf";ctx.textAlign="center";
@@ -129,7 +129,7 @@ function present(){
 }
 function status(){
  const box=$("cwi2-status");if(!box)return;
- box.textContent=state.loading?tr("loading"):state.error?tr("unavailable")+" · "+state.error:state.verified?"CHIRPS v3 · SHA-256 VERIFIED · 372 official source windows":tr("unavailable");
+ box.textContent=state.loading?tr("loading"):state.error?tr("unavailable")+" · "+state.error:state.verified?"CHIRPS v3 · SHA-256 VERIFIED · 372 source files":tr("unavailable");box.dataset.state=state.error?"error":state.verified?"good":"loading";
 }
 function report(){
  const c=cell(state.selected),p=policy();return {schema:"CWI-integrated-analysis-v2",generatedAt:new Date().toISOString(),source:{dataset:state.data?.dataset||null,auditStatus:state.audit?.status||null,sha256Verified:state.verified,sourceSha256:state.audit?.outputSha256||null,reference:"1991–2020",year:2025,boundary:"rectangular viewport including places outside Dak Lak"},rainfall:c,screening:state.verified&&state.span<=state.month?{endMonth:state.month,windowMonths:state.span,matchingGridCells:state.ranked.length,method:"below same-month baseline on all consecutive months; not irrigation shortage"}:null,research:{study:"TNMT2026-085",sample:{COST:217,WTP:217,LAND:218},costRelativePct:39.7,wtpMedianVndYear:262619,landShortageAssociationPct:-21.4,limitation:"Household data not geocoded; cross-sectional noncausal associations"},scenario:p.v?{name:p.v.name,assumptions:p.v,financials:p.actual,source:"CWI v1.7 Policy Studio"}:null,checks:["Verify local water availability","Check costs and actual participation","Validate with field survey","Pilot and evaluate before scaling"],interpretation:"Climate rainfall screening and econometric household results are juxtaposed, not statistically linked."}}
@@ -141,6 +141,12 @@ function exportCSV(){
  const rows=["cell_index,latitude,longitude,month_end,consecutive_months,below_normal_total_mm"];
  state.ranked.forEach(x=>rows.push([x.index,x.lat.toFixed(5),x.lon.toFixed(5),state.month,state.span,x.deficit.toFixed(4)].join(",")));
  download("CWI_rainfall_screening_2025.csv","\ufeff"+rows.join("\n")+"\n","text/csv;charset=utf-8")
+}
+function exportSeries(){
+ if(!state.verified||state.selected===null){alert(tr("unavailable"));return}
+ const rows=["month,year,latitude,longitude,observed_mm,normal_1991_2020_mm,anomaly_mm,standardized_departure"];
+ for(let i=1;i<=12;i++){const p=cell(state.selected,i);if(p)rows.push([i,2025,p.lat.toFixed(5),p.lon.toFixed(5),p.rain.toFixed(4),p.normal.toFixed(4),p.delta.toFixed(4),p.z===null?"":p.z.toFixed(6)].join(","))}
+ download("CWI_chirps_selected_cell_monthly.csv","\ufeff"+rows.join("\n")+"\n","text/csv;charset=utf-8");
 }
 function exportJSON(){download("CWI_integrated_evidence_dossier.json",JSON.stringify(report(),null,2),"application/json;charset=utf-8")}
 function dossier(){
@@ -183,6 +189,7 @@ function init(){
   if(e.target.closest("#cwi2-go-policy")){close();$("nav-policy")?.click();return}
   if(e.target.closest("#cwi2-export-json")){exportJSON();return}
   if(e.target.closest("#cwi2-export-csv")){exportCSV();return}
+  if(e.target.closest("#cwi2-export-series")){exportSeries();return}
   if(e.target.closest("#cwi2-print")){window.print();return}
   const loc=e.target.closest("[data-select]");if(loc){state.selected=Number(loc.dataset.select);render();return}
  });
@@ -190,8 +197,8 @@ function init(){
   switch(e.target.id){case"cwi2-month":state.month=Number(e.target.value);break;case"cwi2-metric":state.metric=e.target.value;break;case"cwi2-span":state.span=Number(e.target.value);break;case"cwi2-case":state.scenario=Number(e.target.value);break;default:return}
   render();
  });
- $("cwi2-map").addEventListener("click",e=>{if(!state.data)return;const box=e.currentTarget.getBoundingClientRect(),g=grid(),c=Math.max(0,Math.min(g.width-1,Math.floor((e.clientX-box.left)/box.width*g.width))),r=Math.max(0,Math.min(g.height-1,Math.floor((e.clientY-box.top)/box.height*g.height)));state.selected=r*g.width+c;render()});
- $("cwi2-map").addEventListener("keydown",e=>{if(!state.data||!["ArrowRight","ArrowLeft","ArrowUp","ArrowDown"].includes(e.key))return;e.preventDefault();const g=grid(),delta={ArrowRight:1,ArrowLeft:-1,ArrowDown:g.width,ArrowUp:-g.width}[e.key];state.selected=Math.max(0,Math.min(g.width*g.height-1,(state.selected||0)+delta));render()});
+ root.addEventListener("click",e=>{if(e.target.id!=="cwi2-map")return;if(!state.data)return;const box=e.currentTarget.getBoundingClientRect(),g=grid(),c=Math.max(0,Math.min(g.width-1,Math.floor((e.clientX-box.left)/box.width*g.width))),r=Math.max(0,Math.min(g.height-1,Math.floor((e.clientY-box.top)/box.height*g.height)));state.selected=r*g.width+c;render()});
+ root.addEventListener("keydown",e=>{if(e.target.id!=="cwi2-map")return;if(!state.data||!["ArrowRight","ArrowLeft","ArrowUp","ArrowDown"].includes(e.key))return;e.preventDefault();const g=grid(),delta={ArrowRight:1,ArrowLeft:-1,ArrowDown:g.width,ArrowUp:-g.width}[e.key];state.selected=Math.max(0,Math.min(g.width*g.height-1,(state.selected||0)+delta));render()});
  document.addEventListener("click",e=>{if(!state.opened)return;const x=e.target.closest(".global-tabs .gtab");if(x&&x.id!=="nav-integrated"){close();btn.setAttribute("aria-expanded","false")} },true);
  window.addEventListener("keydown",e=>{if(e.key==="Escape"&&state.opened){close();$("nav-overview")?.click()}});
  document.addEventListener("cwi-language-changed",()=>{btn.textContent=tr("nav");markup();render()});
